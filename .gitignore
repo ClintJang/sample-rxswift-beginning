@@ -1,8 +1,9 @@
 xcschememanagement.plist
 Xcuserdata/
-contents.xcworkspacedata
 WorkspaceSettings.xcsettings
 UserInterfaceState.xcuserstate
+Breakpoints_v2.xcbkptlist
+contents.xcworkspacedata
 
 *.moved-aside
 *.xccheckout

@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '11.0'
+
+target 'JWSRxSwiftBeginningSample' do
+  use_frameworks!
+
+  # Core
+  pod 'RxSwift'
+  pod 'RxCocoa'
+
+  # Network
+  pod 'RxAlamofire'
+
+end
