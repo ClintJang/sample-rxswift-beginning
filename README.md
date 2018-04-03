@@ -16,10 +16,10 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 
 # 좋은 링크
 - FRP의 구현체 : http://reactivex.io/
-- http://www.rxmarbles.com/
+- 사용/활용법을 알아야죠? : http://www.rxmarbles.com/
 
 # 좋은 블러그
-- https://magi82.github.io/ios-rxswift-01/
+- 마기님 : https://magi82.github.io/ios-rxswift-01/
 
 # 어떻게 시작을 해야될까?
 <pre>
@@ -44,7 +44,12 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - 옵저버 패턴의 확장이라 생각하면 됩니다.
 - 추가로 콜드 옵저버블 의 개념이 더 추가 되어 있습니다. : 누군가 자신을 구독해야 Lazy evaluation(느긋한 계산법)이 되서 이벤트를 발생시키는 개념의 추가
 
+## disposable, disposeBag
+- subscribe(구독하다)가 반환해 주는 것이 disposable(일회용)
+- disposeBag 은 disposable 들을 담아두는 ? 담고 반환하고 메모리 해제는 어찌?
+- 어찌해야되지?? 잘 이해가 안되네... 실전이 필요합니다.
 
 # 실전
-.. 구독하자 구독하자...... 
-천천히 하자 ~~
+- .. 구독하자 구독하자...... 
+- 천천히 하자 ~~
+- 뭘해볼까?
