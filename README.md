@@ -17,6 +17,7 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 # 좋은 링크
 - FRP의 구현체 : http://reactivex.io/
 - 사용/활용법을 알아야죠? : http://www.rxmarbles.com/
+    - 필요한 오퍼레이터 들이 있고, 이해하기 좋게 조작해 볼 수 있습니다. 
 
 # 좋은 블러그
 - 마기님 : https://magi82.github.io/ios-rxswift-01/
@@ -48,6 +49,13 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - subscribe(구독하다)가 반환해 주는 것이 disposable(일회용)
 - disposeBag 은 disposable 들을 담아두는 ? 담고 반환하고 메모리 해제는 어찌?
 - 어찌해야되지?? 잘 이해가 안되네... 실전이 필요합니다.
+
+# 기본 Operator
+## Zip
+- [Bolts](https://github.com/BoltsFramework/Bolts-Swift)라는 라이브러리가 있어요. 동시에 비동기 실행시켜서 모든 실행이 끝났을 때, 어떤 이벤트를 주고 싶었어요. 그때 사용한 라이브러리 인데 (아마 OperationQueue를 이용한 것이겠죠) .. 그걸 쉽게 할 수 있는 Zip이란 오퍼레이터 입니다.
+    - [BoltsSwiftSample](https://github.com/ClintJang/JWSBoltsSwiftSample) : Bolts-Swift 셈플
+
+## 다음은..
 
 # 실전
 - .. 구독하자 구독하자...... 
