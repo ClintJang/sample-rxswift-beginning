@@ -18,6 +18,7 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 
 # 좋은 링크
 - FRP의 구현체 : http://reactivex.io/
+    - https://github.com/ReactiveX
 - 사용/활용법을 알아야죠? : http://www.rxmarbles.com/
     - 필요한 오퍼레이터 들이 있고, 이해하기 좋게 조작해 볼 수 있습니다. 
 
