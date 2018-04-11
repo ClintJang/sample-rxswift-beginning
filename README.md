@@ -9,6 +9,13 @@ rxswift 공부하자!
 Functional + RX = Functional Reactive Programming(FRP)을 해야겠죠...
 >> 아래에 FRP의 구현체가 있습니다. 그것으로 셈플링할 것입니다.
 
+<pre>
+ReactiveX
+rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다. 
+</pre>
+- 나중에 기초 공부가 끝나면 Reactive MVVM으로 넘어가는 것도 생각해 보자구요~ 
+    - https://justhackem.wordpress.com/2015/03/19/rmvvm-architecture/
+
 # 장점
 - 높은 가독성이 있습니다.
   - 코드가 기존 방식에 비해 간결해 진다고 합니다.
@@ -23,15 +30,6 @@ Functional + RX = Functional Reactive Programming(FRP)을 해야겠죠...
 - 검색 할 자료가 부족합니다.
 - 에러시 추적이 어렵습니다.
 - 아는 사람이 적어서 사용하면 싫어합니다.
-
-<pre>
-ReactiveX
-rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다. 
-</pre>
-- 나중에 기초 공부가 끝나면 Reactive MVVM으로 넘어가는 것도 생각해 보자구요~ 
-    - https://justhackem.wordpress.com/2015/03/19/rmvvm-architecture/
-
-
 
 # 좋은 링크
 - FRP의 구현체 : http://reactivex.io/
