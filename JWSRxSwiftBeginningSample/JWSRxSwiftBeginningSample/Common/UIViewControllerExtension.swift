@@ -14,9 +14,11 @@ extension UIViewController {
     }
     
     static func showAlert(_ message: String) {
-        let alertView = UIAlertController(title: "RxSwift Beginning!", message: message, preferredStyle: .alert)
-        alertView.addAction(UIAlertAction(title: "OK", style: .cancel) { _ in
-        })
-        rootViewController().present(alertView, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let alertView = UIAlertController(title: "RxSwift Beginning!", message: message, preferredStyle: .alert)
+            alertView.addAction(UIAlertAction(title: "OK", style: .cancel) { _ in
+            })
+            rootViewController().present(alertView, animated: true, completion: nil)
+        }
     }
 }

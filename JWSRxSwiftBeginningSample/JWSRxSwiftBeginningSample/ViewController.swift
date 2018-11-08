@@ -17,8 +17,8 @@ class ViewController: BaseViewController {
 
         // 테이블 뷰에 넣을 데이터
         let items = Observable.just([
-            "셈플 소스 첫번째 (진행중)",
-            "아직 입니다.",
+            "구독자에게 알리는 방법의 이해",
+            "셈플 소스 두번째 아직 입니다.",
             "아직 입니다."
         ])
         
