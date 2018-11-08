@@ -13,7 +13,7 @@
         <!--Start View Controller-->
         <scene sceneID="dmE-pe-kwp">
             <objects>
-                <viewController id="EoB-8U-6t4" customClass="StartViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartViewController" id="EoB-8U-6t4" customClass="StartViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJI-oZ-axx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
