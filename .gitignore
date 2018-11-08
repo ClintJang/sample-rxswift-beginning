@@ -8,6 +8,7 @@ contents.xcworkspacedata
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+*.xcworkspace
 
 
 # CocoaPods

@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  JWSRxSwiftBeginningSample
 //
-//  Created by Clint on 2018. 3. 29..
-//  Copyright © 2018년 clint. All rights reserved.
+//  Created by Clint on 08/11/2018.
+//  Copyright © 2018 clintjang. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
