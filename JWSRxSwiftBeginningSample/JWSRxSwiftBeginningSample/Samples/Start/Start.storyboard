@@ -17,7 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="rJI-oZ-axx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-8m-uWp">
+                                <rect key="frame" x="27" y="283" width="321" height="101.5"/>
+                                <string key="text">소스와 콘솔 로그를 확인하세요.
+
+Observable 과 subscribe 사용
+
+Observable은 구독자에게 알림을 전달합니다...</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sb9-8m-uWp" firstAttribute="centerX" secondItem="rJI-oZ-axx" secondAttribute="centerX" id="ibG-YP-iCo"/>
+                            <constraint firstItem="Sb9-8m-uWp" firstAttribute="centerY" secondItem="rJI-oZ-axx" secondAttribute="centerY" id="upG-Nh-n3g"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JaW-NR-zFa"/>
                     </view>
                 </viewController>
