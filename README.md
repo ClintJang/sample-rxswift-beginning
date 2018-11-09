@@ -1,9 +1,13 @@
-# sample rxswift beginning
+# Sample RxSwift Beginning
 
-rxswift 공부하자!
+`RxSwift` 공부하자!
 > RX : **R**eactive E**x**tensions
 리엑티브 프로그래밍 패러다임이고 데이터 흐름과 그 데이터의 변경에 따라 전달 되는 것을 중요시 생각하는 패러다임 같습니다. 
->> Functional + RX = Functional Reactive Programming(FRP)
+>> 관련 어려운 단어! <br />
+>> Reactive Programming (RP) <br />
+>> Functional + RX = Functional Reactive Programming(FRP) <br />
+>> Language-Intergrated Query (LINQ) <br />
+>>  왜 공부해야되지?
 
 ```
 ReactiveX
