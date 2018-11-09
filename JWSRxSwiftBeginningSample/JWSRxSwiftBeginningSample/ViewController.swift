@@ -9,16 +9,34 @@
 import UIKit
 
 enum MainCellItem: String, CaseIterable {
+    
     case row1 = "구독자에게 알리는 방법의 이해"
-    case row2 = "셈플 소스 두번째 아직 입니다."
-    case row3 = "아직 입니다."
-
+    case row2 = "create()"
+    case row3 = "just()"
+    case row4 = "from()"
+    case row5 = "scan()"
+    case row6 = "아직 입니다."
+    
     init?(id : Int) {
         switch id {
         case 1: self = .row1
         case 2: self = .row2
         case 3: self = .row3
-        default: return nil
+        case 4: self = .row4
+        case 5: self = .row5
+        case 6: self = .row6
+            default: return nil
+        }
+    }
+    
+    var storyName: String? {
+        switch self {
+        case .row1:
+            return "Start"
+        case .row2:
+            return "Create"
+        default:
+            return nil
         }
     }
 }
@@ -58,15 +76,21 @@ class ViewController: BaseViewController {
     }
 }
 
+extension ViewController {
+    // 이동처리
+    func move(_ storyName:String) {
+        let storyboard = UIStoryboard.init(name: storyName, bundle: nil)
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "\(storyName)ViewController")
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+}
+
 extension ViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("indexPath:\(indexPath)")
         
-        if indexPath.row == 0 {
-            // 구독자에게 알리는 방법의 이해
-            let storyboard = UIStoryboard.init(name: "Start", bundle: nil)
-            let nextViewController = storyboard.instantiateViewController(withIdentifier: "StartViewController")
-            self.navigationController?.pushViewController(nextViewController, animated: true)
+        if let story = MainCellItem.allCases[indexPath.row].storyName {
+            move(story)
         } else {
             UIViewController.showAlert("준비 중 입니다.")
         }
