@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-8m-uWp">
-                                <rect key="frame" x="27" y="283" width="321" height="101.5"/>
+                                <rect key="frame" x="27" y="40" width="321" height="101.5"/>
                                 <string key="text">소스와 콘솔 로그를 확인하세요.
 
 Observable 과 subscribe 사용
@@ -29,18 +29,78 @@ Observable은 구독자에게 알림을 전달합니다...</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84u-yc-grN">
+                                <rect key="frame" x="20" y="161.5" width="335" height="485.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">print("# \(#function)")
+        print("&gt; next() 와 completed가 subscribe 이후 구독자에게 전달 되는 것을 확인 할 수 있음..")
+        print("\n\n\n")
+        
+        let sourceStringA: Observable&lt;String&gt;  = Observable.just("발행할 데이터")
+        sourceStringA.subscribe { (event: Event&lt;String&gt;) in
+            print("## sourceStringA::subscribe 로그")
+            print(event)
+            }
+            .disposed(by: disposeBag)
+        
+        let sourceIntA: Observable&lt;Int&gt;  = Observable.just(1)
+        sourceIntA.subscribe { (event: Event&lt;Int&gt;) in
+            print("## sourceIntA::subscribe 로그")
+            print(event)
+            }
+            .disposed(by: disposeBag)
+        
+        let sourceArrayA: Observable&lt;[Int]&gt; = Observable.from(optional: [1,2,3,4])
+        sourceArrayA.subscribe { (event: Event&lt;[Int]&gt;) in
+            print("## sourceArrayA::subscribe 로그")
+            print(event)
+            }
+            .disposed(by: disposeBag)
+        
+        
+        print("===============================")
+        print("\n\n")
+        
+        // sourceStringA 와 sourceStringB는 같은 소스
+        print("## sourceArrayB::로그")
+        let sourceStringB: Observable&lt;String&gt;  = Observable.just("발행할 데이터")
+        sourceStringB.subscribe( onNext: { print($0) },
+                                 onCompleted:{ print("completed") } )
+            .disposed(by: disposeBag)
+        
+        // sourceIntA 와 sourceIntB는 같은 소스
+        print("## sourceIntB::로그")
+        let sourceIntB: Observable&lt;Int&gt;  = Observable.just(1)
+        sourceIntB.subscribe( onNext: { print($0) },
+                              onCompleted:{ print("completed") } )
+            .disposed(by: disposeBag)
+        
+        // sourceArrayA 와 sourceArrayB는 같은 소스
+        print("## sourceArrayC::로그")
+        let sourceArrayB: Observable&lt;[Int]&gt; = Observable.from(optional: [1,2,3,4])
+        sourceArrayB.subscribe ( onNext: { print($0) },
+                                 onCompleted:{ print("completed") } )
+            .disposed(by: disposeBag)</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="JaW-NR-zFa" firstAttribute="trailing" secondItem="84u-yc-grN" secondAttribute="trailing" constant="20" id="9I4-Dj-Kjq"/>
+                            <constraint firstItem="84u-yc-grN" firstAttribute="top" secondItem="Sb9-8m-uWp" secondAttribute="bottom" constant="20" id="Obp-Wm-t8Y"/>
+                            <constraint firstItem="JaW-NR-zFa" firstAttribute="bottom" secondItem="84u-yc-grN" secondAttribute="bottom" constant="20" id="Yiv-d1-uUE"/>
+                            <constraint firstItem="84u-yc-grN" firstAttribute="leading" secondItem="JaW-NR-zFa" secondAttribute="leading" constant="20" id="aMV-8g-Hfd"/>
                             <constraint firstItem="Sb9-8m-uWp" firstAttribute="centerX" secondItem="rJI-oZ-axx" secondAttribute="centerX" id="ibG-YP-iCo"/>
-                            <constraint firstItem="Sb9-8m-uWp" firstAttribute="centerY" secondItem="rJI-oZ-axx" secondAttribute="centerY" id="upG-Nh-n3g"/>
+                            <constraint firstItem="Sb9-8m-uWp" firstAttribute="top" secondItem="JaW-NR-zFa" secondAttribute="top" constant="20" id="ozQ-mD-KZq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JaW-NR-zFa"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yz6-oK-aey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-124" y="-87"/>
+            <point key="canvasLocation" x="-124" y="-87.706146926536732"/>
         </scene>
     </scenes>
 </document>
