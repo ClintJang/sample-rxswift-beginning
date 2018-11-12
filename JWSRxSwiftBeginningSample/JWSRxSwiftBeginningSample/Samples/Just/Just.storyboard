@@ -17,7 +17,65 @@
                     <view key="view" contentMode="scaleToFill" id="PsV-oU-3av">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just 는 넣은 데이터를 내보내지요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKh-4R-LkQ">
+                                <rect key="frame" x="70" y="40" width="235" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BL1-0g-H6j">
+                                <rect key="frame" x="20" y="81" width="335" height="566"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">print("===============================")
+        print("\n\n")
+        
+        Observable.just(1)
+            .subscribe(onNext:{ print($0) },
+                       onError: { print($0) },
+                       onCompleted: {print("onCompleted")})
+            .disposed(by:disposeBag)
+        
+        print("===============================")
+        print("\n\n")
+        
+        Observable.just("안녕하세요.")
+            .subscribe(onNext:{ print($0) },
+                       onError:{ print($0) },
+                       onCompleted:{ print("onCompleted")})
+            .disposed(by: disposeBag)
+        
+        print("===============================")
+        print("\n\n")
+        
+        Observable.just([1,2,3,4])
+            .subscribe(onNext:{ print($0) },
+                       onError:{ print($0) },
+                       onCompleted:{ print("onCompleted")})
+            .disposed(by: disposeBag)
+
+        print("===============================")
+        print("\n\n")
+        
+        let service :Observable&lt;Int&gt; = Observable.just(99)
+        service.subscribe(onNext:{ print($0) },
+                          onError:{ print($0) },
+                          onCompleted:{ print("onCompleted")})
+            .disposed(by: disposeBag)</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DKh-4R-LkQ" firstAttribute="centerX" secondItem="PsV-oU-3av" secondAttribute="centerX" id="Qwu-md-KIR"/>
+                            <constraint firstItem="uqh-yj-HZt" firstAttribute="bottom" secondItem="BL1-0g-H6j" secondAttribute="bottom" constant="20" id="lXF-mO-neR"/>
+                            <constraint firstItem="uqh-yj-HZt" firstAttribute="trailing" secondItem="BL1-0g-H6j" secondAttribute="trailing" constant="20" id="na2-Lb-07W"/>
+                            <constraint firstItem="BL1-0g-H6j" firstAttribute="leading" secondItem="uqh-yj-HZt" secondAttribute="leading" constant="20" id="p40-zk-Wgk"/>
+                            <constraint firstItem="BL1-0g-H6j" firstAttribute="top" secondItem="DKh-4R-LkQ" secondAttribute="bottom" constant="20" id="qtc-xN-RQk"/>
+                            <constraint firstItem="DKh-4R-LkQ" firstAttribute="top" secondItem="uqh-yj-HZt" secondAttribute="top" constant="20" id="rOO-1L-eHs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uqh-yj-HZt"/>
                     </view>
                 </viewController>

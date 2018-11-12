@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FlatMapViewController: BaseViewController {
+final class FlatMapViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,6 @@ class FlatMapViewController: BaseViewController {
             .flatMap { Observable.just($0) }
             .subscribe(onNext:{print($0)})
             .disposed(by: disposeBag)
-        
         
     }
 }

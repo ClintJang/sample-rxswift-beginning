@@ -12,7 +12,9 @@ enum TestError : Error {
     case createError
 }
 
-class CreateViewController: BaseViewController {
+// http://reactivex.io/documentation/operators/create.html
+
+final class CreateViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
