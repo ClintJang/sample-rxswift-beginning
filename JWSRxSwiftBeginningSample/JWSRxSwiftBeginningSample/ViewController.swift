@@ -10,23 +10,23 @@ import UIKit
 
 enum MainCellItem: String, CaseIterable {
     
-    case row1 = "구독자에게 알리는 방법의 이해"
-    case row2 = "create()"
-    case row3 = "just()"
-    case row4 = "from()"
-    case row5 = "scan()"
-    case row6 = "flatMap()"
-    case row7 = "아직 입니다."
+    case start = "구독자에게 알리는 방법의 이해"
+    case create = "create()"
+    case just = "just()"
+    case from = "from()"
+    case scan = "scan()"
+    case flatMap = "flatMap()"
+    case etc = "아직 입니다."
     
     init?(id : Int) {
         switch id {
-        case 1: self = .row1
-        case 2: self = .row2
-        case 3: self = .row3
-        case 4: self = .row4
-        case 5: self = .row5
-        case 6: self = .row6
-        case 7: self = .row7
+        case 1: self = .start
+        case 2: self = .create
+        case 3: self = .just
+        case 4: self = .from
+        case 5: self = .scan
+        case 6: self = .flatMap
+        case 7: self = .etc
             
             default: return nil
         }
@@ -34,11 +34,13 @@ enum MainCellItem: String, CaseIterable {
     
     var storyName: String? {
         switch self {
-        case .row1:
+        case .start:
             return "Start"
-        case .row2:
+        case .create:
             return "Create"
-        case .row6:
+        case .just:
+            return "Just"
+        case .flatMap:
             return "FlatMap"
         default:
             return nil

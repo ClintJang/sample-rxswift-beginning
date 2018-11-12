@@ -17,7 +17,38 @@
                     <view key="view" contentMode="scaleToFill" id="qQi-iT-wbE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlatMap은 Map과 달리 Observable로 나오지요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3f-9h-bDA">
+                                <rect key="frame" x="17" y="40" width="341" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SEa-Sn-3JW">
+                                <rect key="frame" x="20" y="81" width="335" height="566"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">print("===============================")
+        print("\n\n")
+        
+        let _ = Observable.from([1,2,3,4])
+            .flatMap { Observable.just($0) }
+            .subscribe(onNext:{print($0)})
+            .disposed(by: disposeBag)
+        </string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L3f-9h-bDA" firstAttribute="centerX" secondItem="qQi-iT-wbE" secondAttribute="centerX" id="5yk-ZZ-TAk"/>
+                            <constraint firstItem="bCU-vv-Lok" firstAttribute="trailing" secondItem="SEa-Sn-3JW" secondAttribute="trailing" constant="20" id="H3P-mq-Yc6"/>
+                            <constraint firstItem="SEa-Sn-3JW" firstAttribute="top" secondItem="L3f-9h-bDA" secondAttribute="bottom" constant="20" id="HQG-Mm-m2Z"/>
+                            <constraint firstItem="L3f-9h-bDA" firstAttribute="top" secondItem="bCU-vv-Lok" secondAttribute="top" constant="20" id="JPw-Tl-YL2"/>
+                            <constraint firstItem="SEa-Sn-3JW" firstAttribute="leading" secondItem="bCU-vv-Lok" secondAttribute="leading" constant="20" id="TqP-qZ-p5O"/>
+                            <constraint firstItem="bCU-vv-Lok" firstAttribute="bottom" secondItem="SEa-Sn-3JW" secondAttribute="bottom" constant="20" id="rqA-hy-Yci"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bCU-vv-Lok"/>
                     </view>
                 </viewController>

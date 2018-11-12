@@ -10,12 +10,22 @@ import UIKit
 
 //http://reactivex.io/documentation/operators/just.html
 
-class JustViewController: UIViewController {
+class JustViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        Observable.just(<#T##element: _##_#>, scheduler: <#T##ImmediateSchedulerType#>)
+        Observable.just(1)
+            .subscribe(onNext:{ print($0) },
+                       onError: { print($0) },
+                       onCompleted: {print("onCompleted")})
+            .disposed(by:disposeBag)
+        
+        Observable.just("안녕하세요.")
+            .subscribe(onNext:{ print($0) },
+                       onError:{ print($0) },
+                       onCompleted:{ print("onCompleted")})
+            .disposed(by: disposeBag)
     }
 
 }
