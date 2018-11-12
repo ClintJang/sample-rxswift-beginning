@@ -18,24 +18,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observable create() 언제 사용하는 걸까?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1d-1J-1ga">
-                                <rect key="frame" x="57.5" y="324.5" width="260" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1d-1J-1ga">
+                                <rect key="frame" x="57.5" y="50" width="260" height="54"/>
+                                <string key="text">Observable create() 언제 사용하는 걸까?
+
+소스와 로그를 보세요.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mny-5K-3cW">
+                                <rect key="frame" x="20" y="124" width="335" height="523"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">print("===============================")
+        
+        let _ = Observable&lt;Int&gt;.create { (observer) -&gt; Disposable in
+            
+            observer.onNext(1)
+            observer.onNext(2)
+            observer.onCompleted()
+            
+            return Disposables.create()
+            }.subscribe(onNext: { print($0) },
+                        onError: { print("Error:\($0)") },
+                        onCompleted:{ print("onCompleted") } )
+        .disposed(by: disposeBag)
+        
+        print("===============================")
+        
+        let _ = Observable&lt;Int&gt;.create { (observer) -&gt; Disposable in
+            
+            observer.onNext(1)
+            observer.onNext(2)
+            observer.onNext(3)
+
+            do {
+                // 강제 에러 발생
+//                try self.someThrowingFunction()
+                throw TestError.createError
+                
+            } catch {
+                 observer.onError(error)
+            }
+            
+            // onNext(4)와 onCompleted는 실행되지 않음
+            observer.onNext(4)
+            observer.onCompleted()
+            
+            return Disposables.create()
+            }.subscribe(onNext: { print($0) },
+                        onError: { print("Error:\($0)") },
+                        onCompleted:{ print("onCompleted") } )
+            .disposed(by: disposeBag)
+        
+        print("===============================")
+        
+        let _ = Observable&lt;Int&gt;.create { (observer) -&gt; Disposable in
+            
+            [1,2,3,4,5].forEach({
+                observer.onNext($0)
+            })
+            observer.onCompleted()
+            
+            return Disposables.create()
+            }.subscribe(onNext: { print($0) },
+                        onError: { print("Error:\($0)") },
+                        onCompleted:{ print("onCompleted") } )
+        .disposed(by: disposeBag)
+
+        print("===============================")
+        
+        let _ = Observable&lt;String&gt;.create { (observer) -&gt; Disposable in
+            
+            observer.onNext("1")
+            observer.onNext("2")
+            observer.onCompleted()
+            
+            return Disposables.create()
+            }.subscribe(onNext: { print($0) },
+                        onError: { print("Error:\($0)") },
+                        onCompleted:{ print("onCompleted") } )
+        .disposed(by: disposeBag)</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="q1d-1J-1ga" firstAttribute="top" secondItem="RVm-Od-kAg" secondAttribute="top" constant="30" id="GdZ-YI-guh"/>
                             <constraint firstItem="q1d-1J-1ga" firstAttribute="centerX" secondItem="2lR-zF-XBZ" secondAttribute="centerX" id="Ihh-O7-wyj"/>
-                            <constraint firstItem="q1d-1J-1ga" firstAttribute="centerY" secondItem="2lR-zF-XBZ" secondAttribute="centerY" id="vdN-s9-T9w"/>
+                            <constraint firstItem="RVm-Od-kAg" firstAttribute="bottom" secondItem="Mny-5K-3cW" secondAttribute="bottom" constant="20" id="fHY-6f-OAh"/>
+                            <constraint firstItem="RVm-Od-kAg" firstAttribute="trailing" secondItem="Mny-5K-3cW" secondAttribute="trailing" constant="20" id="hGV-zN-wac"/>
+                            <constraint firstItem="Mny-5K-3cW" firstAttribute="top" secondItem="q1d-1J-1ga" secondAttribute="bottom" constant="20" id="pSu-hy-yNf"/>
+                            <constraint firstItem="Mny-5K-3cW" firstAttribute="leading" secondItem="RVm-Od-kAg" secondAttribute="leading" constant="20" id="sGN-Ni-4GR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RVm-Od-kAg"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfX-qS-nLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65" y="-4"/>
+            <point key="canvasLocation" x="-66.400000000000006" y="-4.0479760119940034"/>
         </scene>
     </scenes>
 </document>

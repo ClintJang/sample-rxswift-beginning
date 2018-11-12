@@ -162,8 +162,8 @@
 		BCE3063C2194257C00611ADF /* Start */ = {
 			isa = PBXGroup;
 			children = (
-				BCE3063D2194259700611ADF /* StartViewController.swift */,
 				BCE3063F2194274E00611ADF /* Start.storyboard */,
+				BCE3063D2194259700611ADF /* StartViewController.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
