@@ -15,7 +15,8 @@ enum MainCellItem: String, CaseIterable {
     case row3 = "just()"
     case row4 = "from()"
     case row5 = "scan()"
-    case row6 = "아직 입니다."
+    case row6 = "flatMap()"
+    case row7 = "아직 입니다."
     
     init?(id : Int) {
         switch id {
@@ -25,6 +26,8 @@ enum MainCellItem: String, CaseIterable {
         case 4: self = .row4
         case 5: self = .row5
         case 6: self = .row6
+        case 7: self = .row7
+            
             default: return nil
         }
     }
@@ -35,6 +38,8 @@ enum MainCellItem: String, CaseIterable {
             return "Start"
         case .row2:
             return "Create"
+        case .row6:
+            return "FlatMap"
         default:
             return nil
         }

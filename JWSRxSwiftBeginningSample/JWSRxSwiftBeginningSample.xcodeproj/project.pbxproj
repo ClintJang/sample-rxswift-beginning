@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		73EB3AF4862F18D550D098B0 /* Pods_JWSRxSwiftBeginningSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF64E9601F7355911728BA8 /* Pods_JWSRxSwiftBeginningSample.framework */; };
+		BC19290421996CFA00690A73 /* FlatMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC19290321996CFA00690A73 /* FlatMap.storyboard */; };
+		BC19290621996D0F00690A73 /* FlatMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC19290521996D0F00690A73 /* FlatMapViewController.swift */; };
 		BCAEBD842195181300992902 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAEBD832195181300992902 /* Create.storyboard */; };
 		BCAEBD86219540C500992902 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAEBD85219540C500992902 /* CreateViewController.swift */; };
 		BCAEBD8A21955A0300992902 /* Just.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAEBD8921955A0300992902 /* Just.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC19290321996CFA00690A73 /* FlatMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlatMap.storyboard; sourceTree = "<group>"; };
+		BC19290521996D0F00690A73 /* FlatMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapViewController.swift; sourceTree = "<group>"; };
 		BCAEBD832195181300992902 /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		BCAEBD85219540C500992902 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		BCAEBD8921955A0300992902 /* Just.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Just.storyboard; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 				EDEB0E7C9814C92094511CE6 /* Pods-JWSRxSwiftBeginningSample.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC19290221996CD300690A73 /* FlatMap */ = {
+			isa = PBXGroup;
+			children = (
+				BC19290321996CFA00690A73 /* FlatMap.storyboard */,
+				BC19290521996D0F00690A73 /* FlatMapViewController.swift */,
+			);
+			path = FlatMap;
 			sourceTree = "<group>";
 		};
 		BCAEBD872195543200992902 /* Just */ = {
@@ -146,6 +159,7 @@
 				BCE3063B2194251600611ADF /* Create */,
 				BCAEBD872195543200992902 /* Just */,
 				BCAEBD882195543E00992902 /* Scan */,
+				BC19290221996CD300690A73 /* FlatMap */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -235,6 +249,7 @@
 				BCE306402194274E00611ADF /* Start.storyboard in Resources */,
 				BCAEBD8E21955A5200992902 /* Scan.storyboard in Resources */,
 				BCE306252193F95D00611ADF /* Assets.xcassets in Resources */,
+				BC19290421996CFA00690A73 /* FlatMap.storyboard in Resources */,
 				BCE306232193F95C00611ADF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +313,7 @@
 				BCE30639219418E000611ADF /* UIViewControllerExtension.swift in Sources */,
 				BCE3061E2193F95C00611ADF /* AppDelegate.swift in Sources */,
 				BCE306352193FCC100611ADF /* BaseViewController.swift in Sources */,
+				BC19290621996D0F00690A73 /* FlatMapViewController.swift in Sources */,
 				BCAEBD9021955A6100992902 /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
