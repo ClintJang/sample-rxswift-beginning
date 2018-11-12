@@ -13,6 +13,9 @@
 ReactiveX
 rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다. 
 ```
+# 셈플
+> 개발하면서 테스트 소스를 작성하면서 공부를 하고 있습니다.<br />
+> 아직은 미흡하죠 .. 계속 수정중
 
 
 # 장점
@@ -24,6 +27,7 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
   - NotificationCenter, Delegate, KVO, GCD .. 등.. Observable로 단일화 됩니다.
 - 테스트 하기 좋습니다.
 - 쉽게 사용할 수 있는 좋은 아키텍쳐들도 있습니다.
+- 회사에 안드로이드, 프론트 모두 RX로 되어있다면, 모두가 RX로 대화할 수 있습니다. (러닝커브가 이해하면.. 높은 만큼 대화에 재미가 있습니다.)
 
 # 단점
 - 러닝 커브가 높습니다.
@@ -38,7 +42,9 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - 마기님 : https://magi82.github.io/ios-rxswift-01/
 - Wade님 : https://brunch.co.kr/@tilltue/2
 - tilltue님 : https://brunch.co.kr/@tilltue/6
-- 민소네님 : http://minsone.github.io/programming/rxswift-observable-of-delegate-callback
+- 민소네님
+	- [[Swift4][ReactiveX]RxSwift를 직접 구현해보기 - Event, Disposable, Observer, Observable](http://minsone.github.io/programming/swift4-implement-own-rx-event-disposable-observer-observable)
+	- http://minsone.github.io/programming/rxswift-observable-of-delegate-callback
 - https://pilgwon.github.io/blog/2017/09/21/why-rxswift.html
 - http://mobicon.tistory.com/467
 
@@ -64,7 +70,8 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - 데이터 발행자 : 가장 핵심적인 개념이며, 이벤트를 시간의 흐름에 따라 전달하는 전달자 입니다.데이터의 변화가 발행하는 데이터 소스 입니다.
 - 비동기적으로 다수의 이벤트를 다루는 방법입니다.
 - 옵저버 패턴의 확장이라 생각하면 됩니다.
-- Hot Observable, Cold Observable가 있습니다.
+- `옵저버블`(`데이터 발행자`)은 이벤트를 `옵저버`(`데이터 수신자`)에 전달합니다.
+- `Hot Observable`, `Cold Observable`가 있습니다.
 	- 콜드 옵저버블 의 개념이 있습니다. : 누군가 자신을 구독해야 Lazy evaluation(느긋한 계산법)이 되서 이벤트를 발생시키는 개념
 	- 콜드 옵저버블은 구독(subscribe())하지 않으면 데이터를 발행하지 않습니다.
 	- 핫 옵저버블은 구독과 관계없이 데이터를 발행합니다.
@@ -77,5 +84,10 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 
 
 # 기본 Operator
-## 아직
+## Just
+## From
+## Scan
+## Map
+## FlatMap
+
 .. 공부합시다.
