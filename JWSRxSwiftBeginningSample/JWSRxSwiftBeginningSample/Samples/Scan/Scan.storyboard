@@ -17,7 +17,66 @@
                     <view key="view" contentMode="scaleToFill" id="dZg-dn-lR5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhR-Ok-mSZ">
+                                <rect key="frame" x="81.5" y="40" width="212.5" height="81.5"/>
+                                <string key="text">Scan은 Reduce와 비슷합니다.
+
+onNext가 실행되는 시점을 
+로그를 보면서 확인해보세요.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ARY-Et-BBF">
+                                <rect key="frame" x="20" y="141.5" width="335" height="505.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">
+        print("===============================")
+        print("\n\n")
+        
+        // Scan
+        let numbers = ["1", "3", "5"]
+        let sourceScan = Observable.from(numbers)
+        sourceScan.scan("b") { (num1, num2) -&gt; String in
+            print("\nscan")
+            print("ball1:\(num1)")
+            print("ball2:\(num2)")
+            return "\(num1),\(num2)"
+            }.subscribe(onNext:{ print("\nonNext"); print($0)},
+                        onError:{ print($0) },
+                        onCompleted:{ print("onCompleted")})
+            .disposed(by: disposeBag)
+        
+        print("===============================")
+        print("\n\n")
+        
+        // Reduce
+        let sourceReduce = Observable.from(numbers)
+        sourceReduce.reduce("b") { (num1, num2) -&gt; String in
+            print("\nreduce")
+            print("num1:\(num1)")
+            print("num2:\(num2)")
+            return "\(num1),\(num2)"
+            }.subscribe(onNext:{ print("\nonNext"); print($0)},
+                        onError:{ print($0) },
+                        onCompleted:{ print("onCompleted")})
+            .disposed(by: disposeBag)
+</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MhR-Ok-mSZ" firstAttribute="top" secondItem="NHz-2h-kBg" secondAttribute="top" constant="20" id="IiQ-A5-sZc"/>
+                            <constraint firstItem="NHz-2h-kBg" firstAttribute="bottom" secondItem="ARY-Et-BBF" secondAttribute="bottom" constant="20" id="LM2-tz-m0N"/>
+                            <constraint firstItem="MhR-Ok-mSZ" firstAttribute="centerX" secondItem="dZg-dn-lR5" secondAttribute="centerX" id="Pjn-dq-ohh"/>
+                            <constraint firstItem="NHz-2h-kBg" firstAttribute="trailing" secondItem="ARY-Et-BBF" secondAttribute="trailing" constant="20" id="dvq-mw-Tva"/>
+                            <constraint firstItem="ARY-Et-BBF" firstAttribute="top" secondItem="MhR-Ok-mSZ" secondAttribute="bottom" constant="20" id="k2Z-fx-uIi"/>
+                            <constraint firstItem="ARY-Et-BBF" firstAttribute="leading" secondItem="NHz-2h-kBg" secondAttribute="leading" constant="20" id="wfF-gj-lkS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NHz-2h-kBg"/>
                     </view>
                 </viewController>

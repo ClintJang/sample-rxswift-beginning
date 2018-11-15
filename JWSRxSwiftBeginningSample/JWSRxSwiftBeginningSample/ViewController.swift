@@ -40,6 +40,8 @@ enum MainCellItem: String, CaseIterable {
             return "Create"
         case .just:
             return "Just"
+        case .scan:
+            return "Scan"
         case .flatMap:
             return "FlatMap"
         default:

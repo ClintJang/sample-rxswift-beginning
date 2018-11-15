@@ -21,5 +21,13 @@ final class FlatMapViewController: BaseViewController {
             .subscribe(onNext:{print($0)})
             .disposed(by: disposeBag)
         
+        print("===============================")
+        print("\n\n")
+        
+        let _ = Observable.from(1...9)
+            .flatMap { Observable.just($0) }
+            .map{ $0 }
+            .subscribe(onNext:{print($0)})
+            .disposed(by: disposeBag)
     }
 }
