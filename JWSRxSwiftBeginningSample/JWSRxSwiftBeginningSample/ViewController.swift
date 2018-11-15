@@ -19,6 +19,7 @@ enum MainCellItem: String, CaseIterable {
     case scan = "scan(), reduce()"
     case flatMap = "flatMap()"
     case zip = "zip()"
+    case gugudan = "구구단을 공부해 볼까요?"
     case etc = "아직 입니다."
     
     init?(id : Int) {
@@ -32,7 +33,8 @@ enum MainCellItem: String, CaseIterable {
         case 7: self = .scan
         case 8: self = .flatMap
         case 9: self = .zip
-        case 10: self = .etc
+        case 10: self = .gugudan
+        case 11: self = .etc
             
             default: return nil
         }
