@@ -14,7 +14,9 @@ enum MainCellItem: String, CaseIterable {
     case create = "create()"
     case just = "just()"
     case from = "from()"
-    case scan = "scan()"
+    case of = "of()"
+    case range = "range()"
+    case scan = "scan(), reduce()"
     case flatMap = "flatMap()"
     case zip = "zip()"
     case etc = "아직 입니다."
@@ -25,10 +27,12 @@ enum MainCellItem: String, CaseIterable {
         case 2: self = .create
         case 3: self = .just
         case 4: self = .from
-        case 5: self = .scan
-        case 6: self = .flatMap
-        case 7: self = .zip
-        case 7: self = .etc
+        case 5: self = .of
+        case 6: self = .range
+        case 7: self = .scan
+        case 8: self = .flatMap
+        case 9: self = .zip
+        case 10: self = .etc
             
             default: return nil
         }
@@ -42,6 +46,10 @@ enum MainCellItem: String, CaseIterable {
             return "Create"
         case .just:
             return "Just"
+        case .of:
+            return "Of"
+        case .range:
+            return "Range"
         case .scan:
             return "Scan"
         case .flatMap:
