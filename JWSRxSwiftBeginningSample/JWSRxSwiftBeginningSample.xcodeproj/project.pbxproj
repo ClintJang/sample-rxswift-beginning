@@ -12,6 +12,7 @@
 		BC19290621996D0F00690A73 /* FlatMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC19290521996D0F00690A73 /* FlatMapViewController.swift */; };
 		BC1929092199902A00690A73 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1929082199902A00690A73 /* MapViewController.swift */; };
 		BC19290B2199904200690A73 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC19290A2199904200690A73 /* Map.storyboard */; };
+		BC2778AF219E1E540011D4EB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BC2778AE219E1E540011D4EB /* README.md */; };
 		BCAEBD842195181300992902 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAEBD832195181300992902 /* Create.storyboard */; };
 		BCAEBD86219540C500992902 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAEBD85219540C500992902 /* CreateViewController.swift */; };
 		BCAEBD8A21955A0300992902 /* Just.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAEBD8921955A0300992902 /* Just.storyboard */; };
@@ -40,6 +41,7 @@
 		BC19290521996D0F00690A73 /* FlatMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapViewController.swift; sourceTree = "<group>"; };
 		BC1929082199902A00690A73 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BC19290A2199904200690A73 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		BC2778AE219E1E540011D4EB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BCAEBD832195181300992902 /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		BCAEBD85219540C500992902 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		BCAEBD8921955A0300992902 /* Just.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Just.storyboard; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		BCE306112193F95C00611ADF = {
 			isa = PBXGroup;
 			children = (
+				BC2778AE219E1E540011D4EB /* README.md */,
 				BCE3061C2193F95C00611ADF /* JWSRxSwiftBeginningSample */,
 				BCE3061B2193F95C00611ADF /* Products */,
 				B18BAB4C016511BC51B7AD4C /* Pods */,
@@ -303,6 +306,7 @@
 				BCAEBD8A21955A0300992902 /* Just.storyboard in Resources */,
 				BCAEBD842195181300992902 /* Create.storyboard in Resources */,
 				BC19290B2199904200690A73 /* Map.storyboard in Resources */,
+				BC2778AF219E1E540011D4EB /* README.md in Resources */,
 				BCC17E39219DC13700848071 /* Range.storyboard in Resources */,
 				BCE306282193F95D00611ADF /* LaunchScreen.storyboard in Resources */,
 				BCC17E2F219DA31E00848071 /* Zip.storyboard in Resources */,
