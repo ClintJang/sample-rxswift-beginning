@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Zip View Controller-->
+        <scene sceneID="XJv-k9-LTt">
+            <objects>
+                <viewController storyboardIdentifier="ZipViewController" id="hTL-IC-eTI" customClass="ZipViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gZb-Vu-2Wv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zip은 발생 순서가 같아야 되나?  로그를 살펴봅시당~" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNd-rf-jKz">
+                                <rect key="frame" x="79" y="40" width="217" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i3X-pp-kLT">
+                                <rect key="frame" x="20" y="101" width="335" height="546"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">
+        print("===============================")
+        print("\n\n")
+        
+        let alphabetFromAToE = Observable.from(["a", "b", "c", "d", "e"])
+        let numberFrom1To5 = Observable.from(["1", "2", "3", "4", "5"])
+        Observable.zip(alphabetFromAToE, numberFrom1To5)
+            .subscribe(onNext:{ print($0) },
+                       onError:{ print($0) },
+                       onCompleted:{ print("onCompleted") })
+        .disposed(by: disposeBag)
+        
+        print("===============================")
+        print("\n\n")
+        
+        let numberFrom1To3 = Observable.from(["1", "2", "3"])
+        Observable.zip(alphabetFromAToE, numberFrom1To3)
+            .subscribe(onNext:{ print($0) },
+                       onError:{ print($0) },
+                       onCompleted:{ print("onCompleted") })
+            .disposed(by: disposeBag)</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="unE-pt-dHK" firstAttribute="bottom" secondItem="i3X-pp-kLT" secondAttribute="bottom" constant="20" id="JUq-2Y-p1e"/>
+                            <constraint firstItem="i3X-pp-kLT" firstAttribute="leading" secondItem="unE-pt-dHK" secondAttribute="leading" constant="20" id="NPd-Cp-JdB"/>
+                            <constraint firstItem="YNd-rf-jKz" firstAttribute="centerX" secondItem="gZb-Vu-2Wv" secondAttribute="centerX" id="PhA-EC-EKj"/>
+                            <constraint firstItem="YNd-rf-jKz" firstAttribute="top" secondItem="unE-pt-dHK" secondAttribute="top" constant="20" id="cSf-0h-y41"/>
+                            <constraint firstItem="i3X-pp-kLT" firstAttribute="top" secondItem="YNd-rf-jKz" secondAttribute="bottom" constant="20" id="sPj-Tt-p6C"/>
+                            <constraint firstItem="unE-pt-dHK" firstAttribute="trailing" secondItem="i3X-pp-kLT" secondAttribute="trailing" constant="20" id="wkQ-ZO-tdi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="unE-pt-dHK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zve-tF-VbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="135"/>
+        </scene>
+    </scenes>
+</document>

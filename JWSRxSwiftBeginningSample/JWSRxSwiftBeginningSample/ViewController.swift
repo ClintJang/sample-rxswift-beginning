@@ -16,6 +16,7 @@ enum MainCellItem: String, CaseIterable {
     case from = "from()"
     case scan = "scan()"
     case flatMap = "flatMap()"
+    case zip = "zip()"
     case etc = "아직 입니다."
     
     init?(id : Int) {
@@ -26,6 +27,7 @@ enum MainCellItem: String, CaseIterable {
         case 4: self = .from
         case 5: self = .scan
         case 6: self = .flatMap
+        case 7: self = .zip
         case 7: self = .etc
             
             default: return nil
@@ -44,6 +46,8 @@ enum MainCellItem: String, CaseIterable {
             return "Scan"
         case .flatMap:
             return "FlatMap"
+        case .zip:
+            return "Zip"
         default:
             return nil
         }
