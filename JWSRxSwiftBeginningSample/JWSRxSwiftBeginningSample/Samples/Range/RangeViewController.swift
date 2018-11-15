@@ -13,6 +13,9 @@ class RangeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("===============================")
+        print("\n\n")
+        
         Observable.range(start: 1, count: 4)
             .subscribe(onNext: { print("onNext::\($0)") },
                        onError: { print($0)},

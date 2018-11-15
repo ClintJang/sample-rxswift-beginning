@@ -17,7 +17,39 @@
                     <view key="view" contentMode="scaleToFill" id="IG1-ty-e48">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range는 시작이 있고,그리고 몇개?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8T-lC-LM1">
+                                <rect key="frame" x="69.5" y="40" width="236.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VPz-Pj-hJm">
+                                <rect key="frame" x="20" y="80.5" width="335" height="566.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">
+        print("===============================")
+        print("\n\n")
+        
+        Observable.range(start: 1, count: 4)
+            .subscribe(onNext: { print("onNext::\($0)") },
+                       onError: { print($0)},
+                       onCompleted: { print("onCompleted") })
+            .disposed(by: disposeBag)</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JD1-bD-i9i" firstAttribute="bottom" secondItem="VPz-Pj-hJm" secondAttribute="bottom" constant="20" id="3ex-PQ-MGk"/>
+                            <constraint firstItem="JD1-bD-i9i" firstAttribute="trailing" secondItem="VPz-Pj-hJm" secondAttribute="trailing" constant="20" id="4BE-mD-tc6"/>
+                            <constraint firstItem="a8T-lC-LM1" firstAttribute="top" secondItem="JD1-bD-i9i" secondAttribute="top" constant="20" id="JDX-ha-IcE"/>
+                            <constraint firstItem="a8T-lC-LM1" firstAttribute="centerX" secondItem="IG1-ty-e48" secondAttribute="centerX" id="K2P-LX-uSF"/>
+                            <constraint firstItem="VPz-Pj-hJm" firstAttribute="top" secondItem="a8T-lC-LM1" secondAttribute="bottom" constant="20" id="chv-4S-cqd"/>
+                            <constraint firstItem="VPz-Pj-hJm" firstAttribute="leading" secondItem="JD1-bD-i9i" secondAttribute="leading" constant="20" id="y7o-6X-E8d"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JD1-bD-i9i"/>
                     </view>
                 </viewController>

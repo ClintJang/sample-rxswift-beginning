@@ -17,7 +17,48 @@
                     <view key="view" contentMode="scaleToFill" id="nC5-iB-WWF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Of는?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diT-xT-NAr">
+                                <rect key="frame" x="166.5" y="54" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eZB-i8-GSp">
+                                <rect key="frame" x="20" y="95" width="335" height="552"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">
+        print("===============================")
+        print("\n\n")
+        
+        Observable.of("1", "2", "3", "4")
+            .subscribe(onNext: { print("onNext::\($0)") },
+                       onError: { print($0)},
+                       onCompleted: { print("onCompleted") })
+            .disposed(by: disposeBag)
+        
+        print("===============================")
+        print("\n\n")
+        
+        Observable.of(1, 2, 3, 4)
+            .subscribe(onNext: { print("onNext::\($0)") },
+                       onError: { print($0)},
+                       onCompleted: { print("onCompleted") })
+            .disposed(by: disposeBag)</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="diT-xT-NAr" firstAttribute="centerX" secondItem="nC5-iB-WWF" secondAttribute="centerX" id="8sn-aW-YsA"/>
+                            <constraint firstItem="diT-xT-NAr" firstAttribute="top" secondItem="50O-gR-rmp" secondAttribute="top" constant="34" id="EIC-ms-zw5"/>
+                            <constraint firstItem="50O-gR-rmp" firstAttribute="trailing" secondItem="eZB-i8-GSp" secondAttribute="trailing" constant="20" id="NoX-Ve-Fcp"/>
+                            <constraint firstItem="eZB-i8-GSp" firstAttribute="top" secondItem="diT-xT-NAr" secondAttribute="bottom" constant="20" id="Uac-Yw-zyA"/>
+                            <constraint firstItem="50O-gR-rmp" firstAttribute="bottom" secondItem="eZB-i8-GSp" secondAttribute="bottom" constant="20" id="UbG-4J-N5H"/>
+                            <constraint firstItem="eZB-i8-GSp" firstAttribute="leading" secondItem="50O-gR-rmp" secondAttribute="leading" constant="20" id="hvm-jO-BCf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="50O-gR-rmp"/>
                     </view>
                 </viewController>
