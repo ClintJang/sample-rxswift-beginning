@@ -58,6 +58,9 @@ enum MainCellItem: String, CaseIterable {
             return "FlatMap"
         case .zip:
             return "Zip"
+        case .gugudan:
+            return "Gugudan"
+            
         default:
             return nil
         }

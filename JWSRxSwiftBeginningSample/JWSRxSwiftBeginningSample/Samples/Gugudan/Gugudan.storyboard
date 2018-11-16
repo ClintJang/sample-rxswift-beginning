@@ -17,7 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="Zcg-wi-GLp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떻게 해야될까?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w82-8E-rec">
+                                <rect key="frame" x="129.5" y="323" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w82-8E-rec" firstAttribute="centerX" secondItem="Zcg-wi-GLp" secondAttribute="centerX" id="Gdo-Mn-8Yx"/>
+                            <constraint firstItem="w82-8E-rec" firstAttribute="centerY" secondItem="Zcg-wi-GLp" secondAttribute="centerY" id="Wdm-2h-dVO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5Wf-WF-Swx"/>
                     </view>
                 </viewController>
