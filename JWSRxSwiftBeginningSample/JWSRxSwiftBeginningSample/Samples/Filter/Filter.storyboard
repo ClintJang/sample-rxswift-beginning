@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Filter View Controller-->
+        <scene sceneID="UvV-cf-JSi">
+            <objects>
+                <viewController storyboardIdentifier="FilterViewController" id="4Yo-iF-mtJ" customClass="FilterViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tYG-G5-cHt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 데이터를 뽑아내는 Filter!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boS-3V-jRd">
+                                <rect key="frame" x="76" y="40" width="223" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gZC-c8-MI2">
+                                <rect key="frame" x="20" y="80.5" width="335" height="566.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">let list : [String] = ["1. 12345", "2. abcdef", "3. ABCDEF", "4. Hello World", "5. Good bye"]
+        let removeKey = "World"
+        
+        print("===============================")
+        print("\n\n")
+        
+        let _ = Observable.from(list)
+            .filter { $0.range(of: removeKey) == nil }
+            .subscribe(onNext:{ print($0) },
+                       onError: { print($0) },
+                       onCompleted: { print("onCompleted") })
+            .disposed(by: disposeBag)</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Mn-Gk-qiF" firstAttribute="trailing" secondItem="gZC-c8-MI2" secondAttribute="trailing" constant="20" id="I93-3i-UNs"/>
+                            <constraint firstItem="6Mn-Gk-qiF" firstAttribute="bottom" secondItem="gZC-c8-MI2" secondAttribute="bottom" constant="20" id="Ioo-yj-4iF"/>
+                            <constraint firstItem="boS-3V-jRd" firstAttribute="centerX" secondItem="tYG-G5-cHt" secondAttribute="centerX" id="Pq0-e3-U00"/>
+                            <constraint firstItem="gZC-c8-MI2" firstAttribute="leading" secondItem="6Mn-Gk-qiF" secondAttribute="leading" constant="20" id="Sra-eg-IGx"/>
+                            <constraint firstItem="boS-3V-jRd" firstAttribute="top" secondItem="6Mn-Gk-qiF" secondAttribute="top" constant="20" id="uoV-7t-dgh"/>
+                            <constraint firstItem="gZC-c8-MI2" firstAttribute="top" secondItem="boS-3V-jRd" secondAttribute="bottom" constant="20" id="vZz-NG-7Ib"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Mn-Gk-qiF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOw-Tb-pVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="49"/>
+        </scene>
+    </scenes>
+</document>

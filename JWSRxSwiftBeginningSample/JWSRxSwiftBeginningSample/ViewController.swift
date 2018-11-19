@@ -18,6 +18,7 @@ enum MainCellItem: String, CaseIterable {
     case range = "range()"
     case scan = "scan(), reduce()"
     case flatMap = "flatMap()"
+    case filter = "Filter()"
     case zip = "zip()"
     case gugudan = "구구단을 공부해 볼까요?"
     case etc = "아직 입니다."
@@ -32,9 +33,10 @@ enum MainCellItem: String, CaseIterable {
         case 6: self = .range
         case 7: self = .scan
         case 8: self = .flatMap
-        case 9: self = .zip
-        case 10: self = .gugudan
-        case 11: self = .etc
+        case 9: self = .filter
+        case 10: self = .zip
+        case 11: self = .gugudan
+        case 12: self = .etc
             
             default: return nil
         }
@@ -56,6 +58,8 @@ enum MainCellItem: String, CaseIterable {
             return "Scan"
         case .flatMap:
             return "FlatMap"
+        case .filter:
+            return "Filter"
         case .zip:
             return "Zip"
         case .gugudan:
