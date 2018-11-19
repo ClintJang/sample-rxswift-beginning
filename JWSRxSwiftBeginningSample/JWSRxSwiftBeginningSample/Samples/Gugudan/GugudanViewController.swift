@@ -20,10 +20,6 @@ class GugudanViewController: BaseViewController {
         let inputValueValid = inputTextField.rx.text.orEmpty
             .map { $0.count < 1 }
             .share(replay: 1)
-            
-        inputValueValid
-            .bind(to: runButton.rx.isHidden)
-            .disposed(by: disposeBag)
         
         inputValueValid
             .bind(to: runButton.rx.isHidden)
