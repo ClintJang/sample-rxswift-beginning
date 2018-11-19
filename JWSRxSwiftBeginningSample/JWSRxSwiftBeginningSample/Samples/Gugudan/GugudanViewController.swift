@@ -34,7 +34,7 @@ class GugudanViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         
-        // 콘솔 1단 테스트
+        // 앱 시작시 콘솔 1단 테스트, 만들기 전에 사전 테스트용도
         console1Dan()
     }
         
@@ -44,15 +44,16 @@ class GugudanViewController: BaseViewController {
             Observable.just(danValue)
                 .flatMap { dan in
                     Observable.range(start: 1, count: 9).map({ row in
-                        return "\(dan) * \(row) = \(dan * row)"
-                    }) }
-                .subscribe(onNext:{ print($0)},
-                           onError:{ print($0) },
-                           onCompleted:{ print("onCompleted")}
-                )
+                        return "\(dan) * \(row) = \(dan * row)\n"
+                    }).reduce("\(danString)단 출력\n", accumulator: { (frist, second) -> String in
+                        return "\(frist)\(second)"
+                    })
+                    
+                }
+                .debug() // 콜솔 결과 보기
+                .bind(to: resultTextView.rx.text)
                 .disposed(by: disposeBag)
         }
-
     }
 }
 
