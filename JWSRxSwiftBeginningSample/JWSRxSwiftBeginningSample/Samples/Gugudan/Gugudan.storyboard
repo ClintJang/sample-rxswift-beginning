@@ -18,24 +18,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떻게 해야될까?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w82-8E-rec">
-                                <rect key="frame" x="129.5" y="323" width="116" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="숫자를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Krt-Da-v7J">
+                                <rect key="frame" x="20" y="81" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1Pa-rG-LXy"/>
+                                    <constraint firstAttribute="width" constant="200" id="liR-ea-Sgn"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgf-dc-13h">
+                                <rect key="frame" x="240" y="81" width="115" height="30"/>
+                                <color key="backgroundColor" red="0.53821971950000003" green="0.7982919731" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IgV-ds-IMc"/>
+                                </constraints>
+                                <state key="normal" title="결과 출력"/>
+                                <state key="highlighted" title="Click!!"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계산하고 싶은 단을 입력해주세요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCr-nu-QjQ">
+                                <rect key="frame" x="20" y="40" width="219.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lfn-EV-MbD">
+                                <rect key="frame" x="20" y="131" width="335" height="516"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="w82-8E-rec" firstAttribute="centerX" secondItem="Zcg-wi-GLp" secondAttribute="centerX" id="Gdo-Mn-8Yx"/>
-                            <constraint firstItem="w82-8E-rec" firstAttribute="centerY" secondItem="Zcg-wi-GLp" secondAttribute="centerY" id="Wdm-2h-dVO"/>
+                            <constraint firstItem="JCr-nu-QjQ" firstAttribute="top" secondItem="5Wf-WF-Swx" secondAttribute="top" constant="20" id="550-Ws-M4a"/>
+                            <constraint firstItem="Lfn-EV-MbD" firstAttribute="leading" secondItem="5Wf-WF-Swx" secondAttribute="leading" constant="20" id="M69-7K-u2E"/>
+                            <constraint firstItem="5Wf-WF-Swx" firstAttribute="trailing" secondItem="jgf-dc-13h" secondAttribute="trailing" constant="20" id="MYT-Gv-eH4"/>
+                            <constraint firstItem="JCr-nu-QjQ" firstAttribute="leading" secondItem="5Wf-WF-Swx" secondAttribute="leading" constant="20" id="O7d-D2-NoZ"/>
+                            <constraint firstItem="Krt-Da-v7J" firstAttribute="top" secondItem="JCr-nu-QjQ" secondAttribute="bottom" constant="20" id="R3y-aU-FvI"/>
+                            <constraint firstItem="Krt-Da-v7J" firstAttribute="leading" secondItem="5Wf-WF-Swx" secondAttribute="leading" constant="20" id="Sm9-2s-PC9"/>
+                            <constraint firstItem="5Wf-WF-Swx" firstAttribute="bottom" secondItem="Lfn-EV-MbD" secondAttribute="bottom" constant="20" id="UkN-Bg-F36"/>
+                            <constraint firstItem="Lfn-EV-MbD" firstAttribute="top" secondItem="Krt-Da-v7J" secondAttribute="bottom" constant="20" id="eoy-YZ-yAP"/>
+                            <constraint firstItem="5Wf-WF-Swx" firstAttribute="trailing" secondItem="Lfn-EV-MbD" secondAttribute="trailing" constant="20" id="jQj-af-4gb"/>
+                            <constraint firstItem="jgf-dc-13h" firstAttribute="leading" secondItem="Krt-Da-v7J" secondAttribute="trailing" constant="20" id="lTN-I3-cxD"/>
+                            <constraint firstItem="jgf-dc-13h" firstAttribute="top" secondItem="JCr-nu-QjQ" secondAttribute="bottom" constant="20" id="pY2-5Z-Zq9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Wf-WF-Swx"/>
                     </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="Krt-Da-v7J" id="fMv-yG-njD"/>
+                        <outlet property="resultTextView" destination="Lfn-EV-MbD" id="fhj-8O-n11"/>
+                        <outlet property="runButton" destination="jgf-dc-13h" id="Nut-I2-tXI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gP1-Eb-9q4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="136"/>
+            <point key="canvasLocation" x="141.59999999999999" y="135.38230884557723"/>
         </scene>
     </scenes>
 </document>
