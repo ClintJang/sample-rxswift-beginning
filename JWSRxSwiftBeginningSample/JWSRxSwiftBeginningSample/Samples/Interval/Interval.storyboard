@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Interval View Controller-->
+        <scene sceneID="4xC-xv-zeX">
+            <objects>
+                <viewController storyboardIdentifier="IntervalViewController" id="u8U-BC-cD2" customClass="IntervalViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FXf-nO-W6h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ib-lW-3et">
+                                <rect key="frame" x="77" y="40" width="221" height="61"/>
+                                <string key="text">Interval은 일정한 시간 간격으로 
+데이터 흐름을 발생시킵니다. 
+로그를 볼까요?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wjt-b3-PLz">
+                                <rect key="frame" x="20" y="121" width="335" height="526"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">print("===============================")
+        print("첫번째 Interval 실행")
+        print("서브스크라이브 되서, 2초 후 부터 반복")
+        print("\n\n")
+        
+        let intervalFirst = 2 // 2초에 한번씩
+        
+        Observable&lt;Int&gt;.interval(RxTimeInterval(intervalFirst), scheduler: MainScheduler.instance)
+//            .debug()
+            .subscribe({ print("첫번째:\($0)") })
+            .disposed(by: disposeBag)
+        
+        print("===============================")
+        print("두번째 Interval 실행")
+        print("서브스크라이브 되서, 3초 후 부터 반복, 5회만 반복")
+        print("\n\n")
+
+        let intervalSecond = 3 // 3초에 한번씩
+        
+        Observable&lt;Int&gt;.interval(RxTimeInterval(intervalSecond), scheduler: MainScheduler.instance)
+            .map({ $0 + 1000 }) // 1000, 1001, 1002...
+            .take(5) // 5회
+            .subscribe({ print("두번째:\($0)") })
+            .disposed(by: disposeBag)
+        
+        print("===============================")
+        print("\n\n")</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4ib-lW-3et" firstAttribute="centerX" secondItem="FXf-nO-W6h" secondAttribute="centerX" id="00L-iu-RlM"/>
+                            <constraint firstItem="C3l-2b-xxy" firstAttribute="trailing" secondItem="wjt-b3-PLz" secondAttribute="trailing" constant="20" id="BKB-LJ-RfA"/>
+                            <constraint firstItem="wjt-b3-PLz" firstAttribute="leading" secondItem="C3l-2b-xxy" secondAttribute="leading" constant="20" id="NSe-jA-E4A"/>
+                            <constraint firstItem="wjt-b3-PLz" firstAttribute="top" secondItem="4ib-lW-3et" secondAttribute="bottom" constant="20" id="VsY-pb-nvm"/>
+                            <constraint firstItem="4ib-lW-3et" firstAttribute="top" secondItem="C3l-2b-xxy" secondAttribute="top" constant="20" id="u1g-xx-Rgx"/>
+                            <constraint firstItem="C3l-2b-xxy" firstAttribute="bottom" secondItem="wjt-b3-PLz" secondAttribute="bottom" constant="20" id="vkX-Mg-hA3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C3l-2b-xxy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mwi-uZ-JAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="88"/>
+        </scene>
+    </scenes>
+</document>

@@ -17,6 +17,8 @@
 		BC2778B6219E21A90011D4EB /* GugudanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2778B5219E21A90011D4EB /* GugudanViewController.swift */; };
 		BC359C4421A2A4FA00DE22A5 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC359C4321A2A4FA00DE22A5 /* Filter.storyboard */; };
 		BC359C4621A2A50C00DE22A5 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC359C4521A2A50C00DE22A5 /* FilterViewController.swift */; };
+		BC359C4A21A3E5E900DE22A5 /* Interval.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC359C4921A3E5E900DE22A5 /* Interval.storyboard */; };
+		BC359C4C21A3E5FD00DE22A5 /* IntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC359C4B21A3E5FD00DE22A5 /* IntervalViewController.swift */; };
 		BCAEBD842195181300992902 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAEBD832195181300992902 /* Create.storyboard */; };
 		BCAEBD86219540C500992902 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAEBD85219540C500992902 /* CreateViewController.swift */; };
 		BCAEBD8A21955A0300992902 /* Just.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAEBD8921955A0300992902 /* Just.storyboard */; };
@@ -50,6 +52,8 @@
 		BC2778B5219E21A90011D4EB /* GugudanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GugudanViewController.swift; sourceTree = "<group>"; };
 		BC359C4321A2A4FA00DE22A5 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		BC359C4521A2A50C00DE22A5 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		BC359C4921A3E5E900DE22A5 /* Interval.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interval.storyboard; sourceTree = "<group>"; };
+		BC359C4B21A3E5FD00DE22A5 /* IntervalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalViewController.swift; sourceTree = "<group>"; };
 		BCAEBD832195181300992902 /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		BCAEBD85219540C500992902 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		BCAEBD8921955A0300992902 /* Just.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Just.storyboard; sourceTree = "<group>"; };
@@ -142,6 +146,15 @@
 				BC359C4521A2A50C00DE22A5 /* FilterViewController.swift */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		BC359C4821A3E5C700DE22A5 /* Interval */ = {
+			isa = PBXGroup;
+			children = (
+				BC359C4921A3E5E900DE22A5 /* Interval.storyboard */,
+				BC359C4B21A3E5FD00DE22A5 /* IntervalViewController.swift */,
+			);
+			path = Interval;
 			sourceTree = "<group>";
 		};
 		BCAEBD872195543200992902 /* Just */ = {
@@ -247,6 +260,7 @@
 				BC359C4221A2A28D00DE22A5 /* Filter */,
 				BCC17E2D219DA30000848071 /* Zip */,
 				BC2778B0219E215F0011D4EB /* Gugudan */,
+				BC359C4821A3E5C700DE22A5 /* Interval */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -345,6 +359,7 @@
 				BC19290421996CFA00690A73 /* FlatMap.storyboard in Resources */,
 				BC2778B2219E217C0011D4EB /* Gugudan.storyboard in Resources */,
 				BCE306232193F95C00611ADF /* Main.storyboard in Resources */,
+				BC359C4A21A3E5E900DE22A5 /* Interval.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +426,7 @@
 				BCE30639219418E000611ADF /* UIViewControllerExtension.swift in Sources */,
 				BC359C4621A2A50C00DE22A5 /* FilterViewController.swift in Sources */,
 				BCE3061E2193F95C00611ADF /* AppDelegate.swift in Sources */,
+				BC359C4C21A3E5FD00DE22A5 /* IntervalViewController.swift in Sources */,
 				BCE306352193FCC100611ADF /* BaseViewController.swift in Sources */,
 				BC19290621996D0F00690A73 /* FlatMapViewController.swift in Sources */,
 				BCAEBD9021955A6100992902 /* ScanViewController.swift in Sources */,

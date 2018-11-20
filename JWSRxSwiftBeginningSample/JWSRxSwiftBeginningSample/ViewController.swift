@@ -21,6 +21,7 @@ enum MainCellItem: String, CaseIterable {
     case filter = "Filter()"
     case zip = "zip()"
     case gugudan = "구구단을 공부해 볼까요?"
+    case interval = "Interval()"
     case etc = "아직 입니다."
     
     init?(id : Int) {
@@ -36,7 +37,8 @@ enum MainCellItem: String, CaseIterable {
         case 9: self = .filter
         case 10: self = .zip
         case 11: self = .gugudan
-        case 12: self = .etc
+        case 12: self = .interval
+        case 13: self = .etc
             
             default: return nil
         }
@@ -64,7 +66,8 @@ enum MainCellItem: String, CaseIterable {
             return "Zip"
         case .gugudan:
             return "Gugudan"
-            
+        case .interval:
+            return "Interval"
         default:
             return nil
         }
