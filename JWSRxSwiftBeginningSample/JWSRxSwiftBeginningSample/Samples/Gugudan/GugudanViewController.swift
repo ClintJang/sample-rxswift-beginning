@@ -31,7 +31,7 @@ class GugudanViewController: BaseViewController {
         
         
         // 앱 시작시 콘솔 1단 테스트, 만들기 전에 사전 테스트용도
-        console1Dan()
+        consoleFrom1To9Dan()
     }
         
         
@@ -41,9 +41,7 @@ class GugudanViewController: BaseViewController {
                 .flatMap { dan in
                     Observable.range(start: 1, count: 9).map({ row in
                         return "\(dan) * \(row) = \(dan * row)\n"
-                    }).reduce("\(danString)단 출력\n", accumulator: { (frist, second) -> String in
-                        return "\(frist)\(second)"
-                    })
+                    }).reduce("\(dan)단 출력\n", accumulator: { "\($0)\($1)" })
                     
                 }
                 .debug() // 콜솔 결과 보기
@@ -54,17 +52,30 @@ class GugudanViewController: BaseViewController {
 }
 
 extension GugudanViewController {
-    func console1Dan() {
+    func consoleFrom1To9Dan() {
         print("===============================")
         print("== 콘솔 로그용")
         print("\n\n")
         
         // 1단
-        Observable.just(1)
+//        Observable.just(1)
+//            .flatMap { dan in
+//                Observable.range(start: 1, count: 9).map({ row in
+//                    return "\(dan) * \(row) = \(dan * row)"
+//                }) }
+//            .subscribe(onNext:{ print($0)},
+//                       onError:{ print($0) },
+//                       onCompleted:{ print("onCompleted")}
+//            )
+//            .disposed(by: disposeBag)
+        
+        // 1부터 9단 찍기
+        Observable.range(start: 1, count: 9)
             .flatMap { dan in
                 Observable.range(start: 1, count: 9).map({ row in
-                    return "\(dan) * \(row) = \(dan * row)"
-                }) }
+                    return "\(dan) * \(row) = \(dan * row)\n"
+                }).reduce("\(dan)단 출력\n", accumulator: { "\($0)\($1)" })
+            }
             .subscribe(onNext:{ print($0)},
                        onError:{ print($0) },
                        onCompleted:{ print("onCompleted")}
