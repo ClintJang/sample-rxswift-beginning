@@ -27,6 +27,8 @@
 		BCAEBD9021955A6100992902 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAEBD8F21955A6100992902 /* ScanViewController.swift */; };
 		BCB288FA21A4FE8C007926A2 /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB288F921A4FE8C007926A2 /* Timer.storyboard */; };
 		BCB288FC21A4FEA7007926A2 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB288FB21A4FEA7007926A2 /* TimerViewController.swift */; };
+		BCB288FF21A54362007926A2 /* IntervalRange.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB288FE21A54362007926A2 /* IntervalRange.storyboard */; };
+		BCB2890121A54370007926A2 /* IntervalRangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2890021A54370007926A2 /* IntervalRangeViewController.swift */; };
 		BCC17E2F219DA31E00848071 /* Zip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC17E2E219DA31E00848071 /* Zip.storyboard */; };
 		BCC17E31219DA34200848071 /* ZipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC17E30219DA34200848071 /* ZipViewController.swift */; };
 		BCC17E34219DBD2500848071 /* Of.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC17E33219DBD2500848071 /* Of.storyboard */; };
@@ -64,6 +66,8 @@
 		BCAEBD8F21955A6100992902 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		BCB288F921A4FE8C007926A2 /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		BCB288FB21A4FEA7007926A2 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		BCB288FE21A54362007926A2 /* IntervalRange.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntervalRange.storyboard; sourceTree = "<group>"; };
+		BCB2890021A54370007926A2 /* IntervalRangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalRangeViewController.swift; sourceTree = "<group>"; };
 		BCC17E2E219DA31E00848071 /* Zip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Zip.storyboard; sourceTree = "<group>"; };
 		BCC17E30219DA34200848071 /* ZipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipViewController.swift; sourceTree = "<group>"; };
 		BCC17E33219DBD2500848071 /* Of.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Of.storyboard; sourceTree = "<group>"; };
@@ -188,6 +192,15 @@
 			path = Timer;
 			sourceTree = "<group>";
 		};
+		BCB288FD21A5433B007926A2 /* IntervalRange */ = {
+			isa = PBXGroup;
+			children = (
+				BCB288FE21A54362007926A2 /* IntervalRange.storyboard */,
+				BCB2890021A54370007926A2 /* IntervalRangeViewController.swift */,
+			);
+			path = IntervalRange;
+			sourceTree = "<group>";
+		};
 		BCC17E2D219DA30000848071 /* Zip */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +288,7 @@
 				BC2778B0219E215F0011D4EB /* Gugudan */,
 				BC359C4821A3E5C700DE22A5 /* Interval */,
 				BCB288F821A4FE5A007926A2 /* Timer */,
+				BCB288FD21A5433B007926A2 /* IntervalRange */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -369,6 +383,7 @@
 				BCC17E2F219DA31E00848071 /* Zip.storyboard in Resources */,
 				BCE306402194274E00611ADF /* Start.storyboard in Resources */,
 				BCAEBD8E21955A5200992902 /* Scan.storyboard in Resources */,
+				BCB288FF21A54362007926A2 /* IntervalRange.storyboard in Resources */,
 				BCE306252193F95D00611ADF /* Assets.xcassets in Resources */,
 				BCB288FA21A4FE8C007926A2 /* Timer.storyboard in Resources */,
 				BC19290421996CFA00690A73 /* FlatMap.storyboard in Resources */,
@@ -447,6 +462,7 @@
 				BC19290621996D0F00690A73 /* FlatMapViewController.swift in Sources */,
 				BCAEBD9021955A6100992902 /* ScanViewController.swift in Sources */,
 				BCC17E3B219DC14600848071 /* RangeViewController.swift in Sources */,
+				BCB2890121A54370007926A2 /* IntervalRangeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
