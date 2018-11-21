@@ -25,6 +25,8 @@
 		BCAEBD8C21955A3400992902 /* JustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAEBD8B21955A3400992902 /* JustViewController.swift */; };
 		BCAEBD8E21955A5200992902 /* Scan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAEBD8D21955A5200992902 /* Scan.storyboard */; };
 		BCAEBD9021955A6100992902 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAEBD8F21955A6100992902 /* ScanViewController.swift */; };
+		BCB288FA21A4FE8C007926A2 /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB288F921A4FE8C007926A2 /* Timer.storyboard */; };
+		BCB288FC21A4FEA7007926A2 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB288FB21A4FEA7007926A2 /* TimerViewController.swift */; };
 		BCC17E2F219DA31E00848071 /* Zip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC17E2E219DA31E00848071 /* Zip.storyboard */; };
 		BCC17E31219DA34200848071 /* ZipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC17E30219DA34200848071 /* ZipViewController.swift */; };
 		BCC17E34219DBD2500848071 /* Of.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC17E33219DBD2500848071 /* Of.storyboard */; };
@@ -60,6 +62,8 @@
 		BCAEBD8B21955A3400992902 /* JustViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustViewController.swift; sourceTree = "<group>"; };
 		BCAEBD8D21955A5200992902 /* Scan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scan.storyboard; sourceTree = "<group>"; };
 		BCAEBD8F21955A6100992902 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		BCB288F921A4FE8C007926A2 /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
+		BCB288FB21A4FEA7007926A2 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		BCC17E2E219DA31E00848071 /* Zip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Zip.storyboard; sourceTree = "<group>"; };
 		BCC17E30219DA34200848071 /* ZipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipViewController.swift; sourceTree = "<group>"; };
 		BCC17E33219DBD2500848071 /* Of.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Of.storyboard; sourceTree = "<group>"; };
@@ -175,6 +179,15 @@
 			path = Scan;
 			sourceTree = "<group>";
 		};
+		BCB288F821A4FE5A007926A2 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				BCB288F921A4FE8C007926A2 /* Timer.storyboard */,
+				BCB288FB21A4FEA7007926A2 /* TimerViewController.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		BCC17E2D219DA30000848071 /* Zip */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +274,7 @@
 				BCC17E2D219DA30000848071 /* Zip */,
 				BC2778B0219E215F0011D4EB /* Gugudan */,
 				BC359C4821A3E5C700DE22A5 /* Interval */,
+				BCB288F821A4FE5A007926A2 /* Timer */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -356,6 +370,7 @@
 				BCE306402194274E00611ADF /* Start.storyboard in Resources */,
 				BCAEBD8E21955A5200992902 /* Scan.storyboard in Resources */,
 				BCE306252193F95D00611ADF /* Assets.xcassets in Resources */,
+				BCB288FA21A4FE8C007926A2 /* Timer.storyboard in Resources */,
 				BC19290421996CFA00690A73 /* FlatMap.storyboard in Resources */,
 				BC2778B2219E217C0011D4EB /* Gugudan.storyboard in Resources */,
 				BCE306232193F95C00611ADF /* Main.storyboard in Resources */,
@@ -427,6 +442,7 @@
 				BC359C4621A2A50C00DE22A5 /* FilterViewController.swift in Sources */,
 				BCE3061E2193F95C00611ADF /* AppDelegate.swift in Sources */,
 				BC359C4C21A3E5FD00DE22A5 /* IntervalViewController.swift in Sources */,
+				BCB288FC21A4FEA7007926A2 /* TimerViewController.swift in Sources */,
 				BCE306352193FCC100611ADF /* BaseViewController.swift in Sources */,
 				BC19290621996D0F00690A73 /* FlatMapViewController.swift in Sources */,
 				BCAEBD9021955A6100992902 /* ScanViewController.swift in Sources */,
