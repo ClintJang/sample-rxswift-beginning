@@ -2,7 +2,7 @@
 //  IntervalRangeViewController.swift
 //  JWSRxSwiftBeginningSample
 //
-//  Created by Jang Wangsu on 21/11/2018.
+//  Created by Clint on 21/11/2018.
 //  Copyright © 2018 clintjang. All rights reserved.
 //
 

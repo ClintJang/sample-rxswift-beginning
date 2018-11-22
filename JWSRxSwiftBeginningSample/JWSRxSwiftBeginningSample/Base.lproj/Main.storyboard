@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4c9-m3-NZe">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="194.5" width="375" height="472.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainCell" id="JKq-3H-4TG">
@@ -48,12 +48,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2q-F9-ayM">
+                                <rect key="frame" x="10" y="74" width="355" height="100.5"/>
+                                <string key="text">* 생성 : 생성 연산자는 데이터 흐름을 만들지요.
+
+* 변환 : 변환 연산자는 데이터 흐름을 원하는 데로 변형 하지요.
+
+* 결합 : 결합 연산자는 다수의 Observable을 하나로 만들어주죠.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4c9-m3-NZe" firstAttribute="top" secondItem="p2q-F9-ayM" secondAttribute="bottom" constant="20" id="7C4-gt-i3Z"/>
+                            <constraint firstItem="p2q-F9-ayM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="HHN-c5-jDs"/>
                             <constraint firstItem="4c9-m3-NZe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Vzb-Er-4LU"/>
                             <constraint firstAttribute="trailing" secondItem="4c9-m3-NZe" secondAttribute="trailing" id="fOI-Gd-tPc"/>
-                            <constraint firstItem="4c9-m3-NZe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vvI-jJ-46M"/>
+                            <constraint firstItem="p2q-F9-ayM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="m7X-uI-ZuA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p2q-F9-ayM" secondAttribute="trailing" constant="10" id="t22-na-nA3"/>
                             <constraint firstItem="4c9-m3-NZe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z9z-iR-nfp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -65,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-465" y="23"/>
+            <point key="canvasLocation" x="-466.39999999999998" y="22.938530734632685"/>
         </scene>
     </scenes>
 </document>

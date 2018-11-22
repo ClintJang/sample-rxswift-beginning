@@ -29,6 +29,8 @@
 		BCB288FC21A4FEA7007926A2 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB288FB21A4FEA7007926A2 /* TimerViewController.swift */; };
 		BCB288FF21A54362007926A2 /* Deferred.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB288FE21A54362007926A2 /* Deferred.storyboard */; };
 		BCB2890121A54370007926A2 /* DeferredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2890021A54370007926A2 /* DeferredViewController.swift */; };
+		BCB2890421A6C496007926A2 /* ConcatMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB2890321A6C496007926A2 /* ConcatMap.storyboard */; };
+		BCB2890621A6C4B6007926A2 /* ConcatMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB2890521A6C4B6007926A2 /* ConcatMapViewController.swift */; };
 		BCC17E2F219DA31E00848071 /* Zip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC17E2E219DA31E00848071 /* Zip.storyboard */; };
 		BCC17E31219DA34200848071 /* ZipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC17E30219DA34200848071 /* ZipViewController.swift */; };
 		BCC17E34219DBD2500848071 /* Of.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC17E33219DBD2500848071 /* Of.storyboard */; };
@@ -68,6 +70,8 @@
 		BCB288FB21A4FEA7007926A2 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		BCB288FE21A54362007926A2 /* Deferred.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Deferred.storyboard; sourceTree = "<group>"; };
 		BCB2890021A54370007926A2 /* DeferredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredViewController.swift; sourceTree = "<group>"; };
+		BCB2890321A6C496007926A2 /* ConcatMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConcatMap.storyboard; sourceTree = "<group>"; };
+		BCB2890521A6C4B6007926A2 /* ConcatMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcatMapViewController.swift; sourceTree = "<group>"; };
 		BCC17E2E219DA31E00848071 /* Zip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Zip.storyboard; sourceTree = "<group>"; };
 		BCC17E30219DA34200848071 /* ZipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipViewController.swift; sourceTree = "<group>"; };
 		BCC17E33219DBD2500848071 /* Of.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Of.storyboard; sourceTree = "<group>"; };
@@ -201,6 +205,15 @@
 			path = Defer;
 			sourceTree = "<group>";
 		};
+		BCB2890221A6C479007926A2 /* ConcatMap */ = {
+			isa = PBXGroup;
+			children = (
+				BCB2890321A6C496007926A2 /* ConcatMap.storyboard */,
+				BCB2890521A6C4B6007926A2 /* ConcatMapViewController.swift */,
+			);
+			path = ConcatMap;
+			sourceTree = "<group>";
+		};
 		BCC17E2D219DA30000848071 /* Zip */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +302,7 @@
 				BC359C4821A3E5C700DE22A5 /* Interval */,
 				BCB288F821A4FE5A007926A2 /* Timer */,
 				BCB288FD21A5433B007926A2 /* Defer */,
+				BCB2890221A6C479007926A2 /* ConcatMap */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -379,6 +393,7 @@
 				BC19290B2199904200690A73 /* Map.storyboard in Resources */,
 				BC2778AF219E1E540011D4EB /* README.md in Resources */,
 				BCC17E39219DC13700848071 /* Range.storyboard in Resources */,
+				BCB2890421A6C496007926A2 /* ConcatMap.storyboard in Resources */,
 				BCE306282193F95D00611ADF /* LaunchScreen.storyboard in Resources */,
 				BCC17E2F219DA31E00848071 /* Zip.storyboard in Resources */,
 				BCE306402194274E00611ADF /* Start.storyboard in Resources */,
@@ -448,6 +463,7 @@
 				BC2778B6219E21A90011D4EB /* GugudanViewController.swift in Sources */,
 				BCC17E31219DA34200848071 /* ZipViewController.swift in Sources */,
 				BCAEBD8C21955A3400992902 /* JustViewController.swift in Sources */,
+				BCB2890621A6C4B6007926A2 /* ConcatMapViewController.swift in Sources */,
 				BCE3063E2194259700611ADF /* StartViewController.swift in Sources */,
 				BCE306202193F95C00611ADF /* ViewController.swift in Sources */,
 				BC1929092199902A00690A73 /* MapViewController.swift in Sources */,

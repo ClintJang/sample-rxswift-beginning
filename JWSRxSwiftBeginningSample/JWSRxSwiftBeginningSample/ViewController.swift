@@ -11,41 +11,21 @@ import UIKit
 enum MainCellItem: String, CaseIterable {
     
     case start = "구독자에게 알리는 방법의 이해"
-    case create = "create()"
-    case just = "just()"
-    case from = "from()"
+    case create = "생성, create()"
+    case just = "생성, just()"
+    case from = "생성, from()"
     case of = "of()"
-    case range = "range()"
-    case scan = "scan(), reduce()"
-    case flatMap = "flatMap()"
+    case range = "생성, range()"
+    case scan = "변환, scan(), reduce()"
+    case flatMap = "변환, flatMap()"
     case filter = "filter()"
     case zip = "zip()"
     case gugudan = "구구단을 공부해 볼까요?"
-    case interval = "interval()"
-    case timer = "timer()"
-    case deferred = "deferred()"
+    case interval = "생성, interval()"
+    case timer = "생성, timer()"
+    case deferred = "생성, deferred()"
+    case concatMap = "변환, concatMap()"
     case etc = "아직 입니다."
-    
-    init?(id : Int) {
-        switch id {
-        case 1: self = .start
-        case 2: self = .create
-        case 3: self = .just
-        case 4: self = .from
-        case 5: self = .of
-        case 6: self = .range
-        case 7: self = .scan
-        case 8: self = .flatMap
-        case 9: self = .filter
-        case 10: self = .zip
-        case 11: self = .gugudan
-        case 12: self = .interval
-        case 13: self = .deferred
-        case 14: self = .etc
-            
-            default: return nil
-        }
-    }
     
     var storyName: String? {
         switch self {
