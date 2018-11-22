@@ -96,8 +96,9 @@ class ViewController: BaseViewController {
         // 셀
         items
             .bind(to: tableView.rx.items(cellIdentifier: "MainCell", cellType: UITableViewCell.self)) { (row, element, cell) in
+                let rowAddSpaceString = (row < 9 ? " " : "") + "\(row+1)"
                 
-                cell.textLabel?.text = "\(element)"
+                cell.textLabel?.text = "\(rowAddSpaceString). \(element)"
                 cell.selectionStyle = .none
             }
             .disposed(by: disposeBag)
