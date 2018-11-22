@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Deferred View Controller-->
+        <scene sceneID="AJ5-bP-NNW">
+            <objects>
+                <viewController storyboardIdentifier="DeferredViewController" id="9Ge-hu-Pq7" customClass="DeferredViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wrx-JA-QMU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVX-UN-G1n">
+                                <rect key="frame" x="27" y="40" width="321" height="81.5"/>
+                                <string key="text">Defer 함수는 
+Deffered() 안에 생성될 Observable의 생성을 
+구독 될 때까지 미룰 수 있는 
+오퍼레이터입니다.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BvF-d8-QpS">
+                                <rect key="frame" x="20" y="141.5" width="335" height="505.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <mutableString key="text">print("===============================")
+        
+        let deferred = Observable&lt;String&gt;.deferred {
+            
+            // just("defer")의 실행을 늦춰보자!!
+            Observable&lt;String&gt;.just("defer").debug()
+        }
+        
+        // 딜레이 시키고 싶은 시간을 정하자
+        let delayTime = 3.0
+        print("== \(delayTime) 초 뒤에 subscribe 를 실행 할 것이고")
+        print("== 그때!! Observable&lt;String&gt;.just(..).debug() 가 실행 될 것입니다.")
+        print("\n\n")
+
+        
+        // 3초 뒤에 "Observable&lt;String&gt;.just("defer").debug()" 실행
+        DispatchQueue.main.asyncAfter(deadline: .now() + delayTime) { [weak self] in
+            if let strongSelf = self {
+                deferred.subscribe(onNext:{ print($0) })
+                    .disposed(by: strongSelf.disposeBag)
+            }
+        }
+        
+        print("===============================")
+        print("\n\n")</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oVX-UN-G1n" firstAttribute="centerX" secondItem="wrx-JA-QMU" secondAttribute="centerX" id="BKj-J6-eHW"/>
+                            <constraint firstItem="SWb-fI-lXF" firstAttribute="trailing" secondItem="BvF-d8-QpS" secondAttribute="trailing" constant="20" id="cfz-Yk-BJL"/>
+                            <constraint firstItem="SWb-fI-lXF" firstAttribute="bottom" secondItem="BvF-d8-QpS" secondAttribute="bottom" constant="20" id="gaE-KF-1W7"/>
+                            <constraint firstItem="BvF-d8-QpS" firstAttribute="top" secondItem="oVX-UN-G1n" secondAttribute="bottom" constant="20" id="h4d-Gl-2W2"/>
+                            <constraint firstItem="BvF-d8-QpS" firstAttribute="leading" secondItem="SWb-fI-lXF" secondAttribute="leading" constant="20" id="iEr-KW-PeI"/>
+                            <constraint firstItem="oVX-UN-G1n" firstAttribute="top" secondItem="SWb-fI-lXF" secondAttribute="top" constant="20" id="zzl-Xi-DJc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SWb-fI-lXF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOf-ML-ltV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="44"/>
+        </scene>
+    </scenes>
+</document>
