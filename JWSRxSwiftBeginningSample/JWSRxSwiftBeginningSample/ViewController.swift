@@ -53,6 +53,8 @@ enum MainCellItem: String, CaseIterable {
             return "Interval"
         case .timer:
             return "Timer"
+        case .concatMap:
+            return "ConcatMap"
         case .deferred:
             return "Deferred"
         default:

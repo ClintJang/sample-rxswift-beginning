@@ -17,7 +17,58 @@
                     <view key="view" contentMode="scaleToFill" id="tSi-XH-G4t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="concatMap은 flatMap과 달리 순서를 보장한다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QX4-UO-5Xg">
+                                <rect key="frame" x="23.5" y="40" width="328" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZDB-ya-ngz">
+                                <rect key="frame" x="20" y="80.5" width="335" height="566.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <mutableString key="text">print("===============================")
+        print("\n\n")
+
+        let list = [
+            "영어": Observable.of("A", "B", "C", "D"),
+            "숫자": Observable.of("하나", "둘", "셋"),
+            "한글": Observable.of("ㄱ", "ㄴ", "ㄷ"),
+        ]
+        
+        let observable = Observable.of("영어", "숫자", "한글")
+        
+        
+        // flatMap 결과
+        print("flatMap 결과")
+        observable.flatMap { element in
+            list[element] ?? .empty()
+            }
+            .subscribe({ print($0.element ?? "") })
+            .disposed(by: disposeBag)
+        
+        print("\n\n")
+        print("concatMap 결과")
+        // concatMap 결과
+        observable.concatMap({ element in
+            list[element] ?? .empty()
+            })
+            .subscribe({ print($0.element ?? "") })
+            .disposed(by: disposeBag)</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QX4-UO-5Xg" firstAttribute="centerX" secondItem="tSi-XH-G4t" secondAttribute="centerX" id="DmT-m7-43n"/>
+                            <constraint firstItem="ZDB-ya-ngz" firstAttribute="top" secondItem="QX4-UO-5Xg" secondAttribute="bottom" constant="20" id="JPi-8h-2Sy"/>
+                            <constraint firstItem="QX4-UO-5Xg" firstAttribute="top" secondItem="fv0-tQ-JjX" secondAttribute="top" constant="20" id="dCR-AE-JIP"/>
+                            <constraint firstItem="ZDB-ya-ngz" firstAttribute="leading" secondItem="fv0-tQ-JjX" secondAttribute="leading" constant="20" id="dNf-qy-LbR"/>
+                            <constraint firstItem="fv0-tQ-JjX" firstAttribute="trailing" secondItem="ZDB-ya-ngz" secondAttribute="trailing" constant="20" id="oDZ-kl-t1G"/>
+                            <constraint firstItem="fv0-tQ-JjX" firstAttribute="bottom" secondItem="ZDB-ya-ngz" secondAttribute="bottom" constant="20" id="yIm-Ls-vVD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fv0-tQ-JjX"/>
                     </view>
                 </viewController>
