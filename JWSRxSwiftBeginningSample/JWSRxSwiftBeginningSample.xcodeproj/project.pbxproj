@@ -37,6 +37,8 @@
 		BCC17E36219DBD3F00848071 /* OfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC17E35219DBD3F00848071 /* OfViewController.swift */; };
 		BCC17E39219DC13700848071 /* Range.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC17E38219DC13700848071 /* Range.storyboard */; };
 		BCC17E3B219DC14600848071 /* RangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC17E3A219DC14600848071 /* RangeViewController.swift */; };
+		BCCEEECC21AE5F4C00AC44C3 /* PublishSubject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCEEECB21AE5F4C00AC44C3 /* PublishSubject.storyboard */; };
+		BCCEEECE21AE5F6E00AC44C3 /* PublishSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEEECD21AE5F6E00AC44C3 /* PublishSubjectViewController.swift */; };
 		BCE3061E2193F95C00611ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3061D2193F95C00611ADF /* AppDelegate.swift */; };
 		BCE306202193F95C00611ADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3061F2193F95C00611ADF /* ViewController.swift */; };
 		BCE306232193F95C00611ADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE306212193F95C00611ADF /* Main.storyboard */; };
@@ -78,6 +80,8 @@
 		BCC17E35219DBD3F00848071 /* OfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfViewController.swift; sourceTree = "<group>"; };
 		BCC17E38219DC13700848071 /* Range.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Range.storyboard; sourceTree = "<group>"; };
 		BCC17E3A219DC14600848071 /* RangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeViewController.swift; sourceTree = "<group>"; };
+		BCCEEECB21AE5F4C00AC44C3 /* PublishSubject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PublishSubject.storyboard; sourceTree = "<group>"; };
+		BCCEEECD21AE5F6E00AC44C3 /* PublishSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishSubjectViewController.swift; sourceTree = "<group>"; };
 		BCE3061A2193F95C00611ADF /* JWSRxSwiftBeginningSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWSRxSwiftBeginningSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE3061D2193F95C00611ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE3061F2193F95C00611ADF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +245,15 @@
 			path = Range;
 			sourceTree = "<group>";
 		};
+		BCCEEECA21AE5F3600AC44C3 /* PublishSubject */ = {
+			isa = PBXGroup;
+			children = (
+				BCCEEECB21AE5F4C00AC44C3 /* PublishSubject.storyboard */,
+				BCCEEECD21AE5F6E00AC44C3 /* PublishSubjectViewController.swift */,
+			);
+			path = PublishSubject;
+			sourceTree = "<group>";
+		};
 		BCE306112193F95C00611ADF = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +316,7 @@
 				BCB288F821A4FE5A007926A2 /* Timer */,
 				BCB288FD21A5433B007926A2 /* Defer */,
 				BCB2890221A6C479007926A2 /* ConcatMap */,
+				BCCEEECA21AE5F3600AC44C3 /* PublishSubject */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -401,6 +415,7 @@
 				BCB288FF21A54362007926A2 /* Deferred.storyboard in Resources */,
 				BCE306252193F95D00611ADF /* Assets.xcassets in Resources */,
 				BCB288FA21A4FE8C007926A2 /* Timer.storyboard in Resources */,
+				BCCEEECC21AE5F4C00AC44C3 /* PublishSubject.storyboard in Resources */,
 				BC19290421996CFA00690A73 /* FlatMap.storyboard in Resources */,
 				BC2778B2219E217C0011D4EB /* Gugudan.storyboard in Resources */,
 				BCE306232193F95C00611ADF /* Main.storyboard in Resources */,
@@ -471,6 +486,7 @@
 				BCAEBD86219540C500992902 /* CreateViewController.swift in Sources */,
 				BCE30639219418E000611ADF /* UIViewControllerExtension.swift in Sources */,
 				BC359C4621A2A50C00DE22A5 /* FilterViewController.swift in Sources */,
+				BCCEEECE21AE5F6E00AC44C3 /* PublishSubjectViewController.swift in Sources */,
 				BCE3061E2193F95C00611ADF /* AppDelegate.swift in Sources */,
 				BC359C4C21A3E5FD00DE22A5 /* IntervalViewController.swift in Sources */,
 				BCB288FC21A4FEA7007926A2 /* TimerViewController.swift in Sources */,
