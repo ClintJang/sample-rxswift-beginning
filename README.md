@@ -1,4 +1,4 @@
-# Sample RxSwift Beginning
+# RxSwift Beginning Sample
 
 `RxSwift` 공부하자!
 > RX : **R**eactive E**x**tensions
@@ -13,6 +13,7 @@
 ReactiveX
 rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다. 
 ```
+
 # 셈플
 > 개발하면서 테스트 소스를 작성하면서 공부를 하고 있습니다.<br />
 > 아직은 미흡하죠 .. 계속 수정중
@@ -79,6 +80,10 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 
 
 # 기본 용어
+
+## Sequence
+- [Sequences 란?](https://medium.com/@jang.wangsu/rxswift-rxswift%EC%97%90%EC%84%9C-%EC%8B%9C%ED%80%80%EC%8A%A4-sequence-%EB%9E%80-6d3fd2b14c29) : 자주 언급되는 기본 용어이죠? 데이터 타입니다. 링크 안에 내용을 정리해봤습니다.
+
 ## Observable
 - 데이터 발행자 : 가장 핵심적인 개념이며, 이벤트를 시간의 흐름에 따라 전달하는 전달자 입니다.데이터의 변화가 발행하는 데이터 소스 입니다.
 - 비동기적으로 다수의 이벤트를 다루는 방법입니다.
