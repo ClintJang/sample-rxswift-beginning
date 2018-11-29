@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Replay Subject View Controller-->
+        <scene sceneID="ahd-v3-Itn">
+            <objects>
+                <viewController storyboardIdentifier="ReplaySubjectViewController" id="IlG-rE-8zh" customClass="ReplaySubjectViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4pE-VZ-rr7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezH-rR-N7L">
+                                <rect key="frame" x="20" y="40" width="335" height="101.5"/>
+                                <string key="text">구독자가 생기면 버퍼 사이즈 만큼, 버퍼에 쌓아두었다가 구독자에게 전달합니다.  버퍼 사이즈가 0이라면 PublicSubject와 똑같습니다. 
+소스에서 버퍼 사이즈(let bufferSize)를 바꿔가며, 기능을 이해해 보면 좋을 것 같습니다.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ezH-rR-N7L" firstAttribute="leading" secondItem="V1Y-gV-jwa" secondAttribute="leading" constant="20" id="Qt5-To-9dE"/>
+                            <constraint firstItem="ezH-rR-N7L" firstAttribute="top" secondItem="V1Y-gV-jwa" secondAttribute="top" constant="20" id="fG7-RD-Zub"/>
+                            <constraint firstItem="V1Y-gV-jwa" firstAttribute="trailing" secondItem="ezH-rR-N7L" secondAttribute="trailing" constant="20" id="fcb-SL-Xcv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V1Y-gV-jwa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a4P-EY-zno" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="74"/>
+        </scene>
+    </scenes>
+</document>

@@ -26,6 +26,7 @@ enum MainCellItem: String, CaseIterable {
     case deferred = "생성, deferred()"
     case concatMap = "변환, concatMap()"
     case publicSubject = "PublishSubject"
+    case replaySubject = "ReplaySubject"
     case etc = "아직 입니다."
     
     var storyName: String? {
@@ -60,6 +61,8 @@ enum MainCellItem: String, CaseIterable {
             return "Deferred"
         case .publicSubject:
             return "PublishSubject"
+        case .replaySubject:
+            return "ReplaySubject"
         default:
             return nil
         }
