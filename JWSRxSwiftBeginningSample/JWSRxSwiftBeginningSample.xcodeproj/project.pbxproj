@@ -41,6 +41,8 @@
 		BCCEEECE21AE5F6E00AC44C3 /* PublishSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEEECD21AE5F6E00AC44C3 /* PublishSubjectViewController.swift */; };
 		BCCEEED121AF5C9A00AC44C3 /* ReplaySubject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCEEED021AF5C9A00AC44C3 /* ReplaySubject.storyboard */; };
 		BCCEEED321AF5CB200AC44C3 /* ReplaySubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEEED221AF5CB200AC44C3 /* ReplaySubjectViewController.swift */; };
+		BCCEEED621AF866800AC44C3 /* BehaviorSubject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCEEED521AF866800AC44C3 /* BehaviorSubject.storyboard */; };
+		BCCEEED821AF87C500AC44C3 /* BehaviorSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEEED721AF87C500AC44C3 /* BehaviorSubjectViewController.swift */; };
 		BCE3061E2193F95C00611ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3061D2193F95C00611ADF /* AppDelegate.swift */; };
 		BCE306202193F95C00611ADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3061F2193F95C00611ADF /* ViewController.swift */; };
 		BCE306232193F95C00611ADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE306212193F95C00611ADF /* Main.storyboard */; };
@@ -86,6 +88,8 @@
 		BCCEEECD21AE5F6E00AC44C3 /* PublishSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishSubjectViewController.swift; sourceTree = "<group>"; };
 		BCCEEED021AF5C9A00AC44C3 /* ReplaySubject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReplaySubject.storyboard; sourceTree = "<group>"; };
 		BCCEEED221AF5CB200AC44C3 /* ReplaySubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaySubjectViewController.swift; sourceTree = "<group>"; };
+		BCCEEED521AF866800AC44C3 /* BehaviorSubject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BehaviorSubject.storyboard; sourceTree = "<group>"; };
+		BCCEEED721AF87C500AC44C3 /* BehaviorSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorSubjectViewController.swift; sourceTree = "<group>"; };
 		BCE3061A2193F95C00611ADF /* JWSRxSwiftBeginningSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWSRxSwiftBeginningSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE3061D2193F95C00611ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE3061F2193F95C00611ADF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +271,15 @@
 			path = ReplaySubject;
 			sourceTree = "<group>";
 		};
+		BCCEEED421AF840100AC44C3 /* BehaviorSubject */ = {
+			isa = PBXGroup;
+			children = (
+				BCCEEED521AF866800AC44C3 /* BehaviorSubject.storyboard */,
+				BCCEEED721AF87C500AC44C3 /* BehaviorSubjectViewController.swift */,
+			);
+			path = BehaviorSubject;
+			sourceTree = "<group>";
+		};
 		BCE306112193F95C00611ADF = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +344,7 @@
 				BCB2890221A6C479007926A2 /* ConcatMap */,
 				BCCEEECA21AE5F3600AC44C3 /* PublishSubject */,
 				BCCEEECF21AF5C7A00AC44C3 /* ReplaySubject */,
+				BCCEEED421AF840100AC44C3 /* BehaviorSubject */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -415,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCC17E34219DBD2500848071 /* Of.storyboard in Resources */,
+				BCCEEED621AF866800AC44C3 /* BehaviorSubject.storyboard in Resources */,
 				BCAEBD8A21955A0300992902 /* Just.storyboard in Resources */,
 				BCCEEED121AF5C9A00AC44C3 /* ReplaySubject.storyboard in Resources */,
 				BC359C4421A2A4FA00DE22A5 /* Filter.storyboard in Resources */,
@@ -507,6 +522,7 @@
 				BC359C4C21A3E5FD00DE22A5 /* IntervalViewController.swift in Sources */,
 				BCB288FC21A4FEA7007926A2 /* TimerViewController.swift in Sources */,
 				BCE306352193FCC100611ADF /* BaseViewController.swift in Sources */,
+				BCCEEED821AF87C500AC44C3 /* BehaviorSubjectViewController.swift in Sources */,
 				BC19290621996D0F00690A73 /* FlatMapViewController.swift in Sources */,
 				BCAEBD9021955A6100992902 /* ScanViewController.swift in Sources */,
 				BCC17E3B219DC14600848071 /* RangeViewController.swift in Sources */,

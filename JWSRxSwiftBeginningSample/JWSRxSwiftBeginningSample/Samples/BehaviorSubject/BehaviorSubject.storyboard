@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Behavior Subject View Controller-->
+        <scene sceneID="irj-FH-00d">
+            <objects>
+                <viewController storyboardIdentifier="BehaviorSubjectViewController" id="LwJ-3N-cbA" customClass="BehaviorSubjectViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZF9-eU-w24">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BehaviorSubject는 구독을 하면 가장 최근 값이나 기본 값을 넘겨주죠. 로그를 봐보세요~" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIB-WU-H54">
+                                <rect key="frame" x="20" y="40" width="335" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jIB-WU-H54" secondAttribute="trailing" constant="20" id="P2e-So-b8a"/>
+                            <constraint firstItem="jIB-WU-H54" firstAttribute="top" secondItem="dTX-hu-qKz" secondAttribute="top" constant="20" id="WOq-uC-6Im"/>
+                            <constraint firstItem="jIB-WU-H54" firstAttribute="leading" secondItem="dTX-hu-qKz" secondAttribute="leading" constant="20" id="elJ-je-rPz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dTX-hu-qKz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AkT-bZ-jon" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="81"/>
+        </scene>
+    </scenes>
+</document>
