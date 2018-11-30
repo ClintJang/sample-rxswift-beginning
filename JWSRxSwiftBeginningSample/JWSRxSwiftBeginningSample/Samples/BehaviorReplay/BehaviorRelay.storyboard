@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Behavior Relay View Controller-->
+        <scene sceneID="6DX-LC-idF">
+            <objects>
+                <viewController storyboardIdentifier="BehaviorRelayViewController" id="mx8-44-Fcd" customClass="BehaviorRelayViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kmF-rz-a3H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2w-c2-HDD">
+                                <rect key="frame" x="20" y="40" width="335" height="162.5"/>
+                                <string key="text">BehaviorRelay 는 Variable 이 Depricated 되면서,
+BehaviorSubject 를 래핑한 것으로 UI에서 자주 사용된다고 알고 있습니다.
+사용도 간편합니다.
+BehaviorSubject 처럼,  초기 값을 주어 생성하고 
+accept에 변경된 값을 사용합니다. 
+현재의 값은 value 로 읽으면 됩니다.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ebT-TW-yIJ">
+                                <rect key="frame" x="20" y="222.5" width="335" height="424.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">print("===============================")
+        print("\n\n")
+        
+        let subject = BehaviorRelay(value: "Default String")
+        
+        // value : get-only-property
+        print("value print : \(subject.value)")
+        
+        subject.accept("A") // 안나옴
+        subject.accept("B")
+        
+        subject.asObservable()
+            .subscribe(onNext: { text in
+                print(text)
+            }).disposed(by: disposeBag)
+        subject.accept("C")
+        subject.accept("D (Last)")
+
+        subject.asObservable()
+            .subscribe(onNext: { text in
+                print(text)
+            }).disposed(by: disposeBag)
+        
+        subject.accept("E")
+        subject.accept("F")
+        subject.accept("G")
+        
+        print("===============================")
+        print("\n\n")</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ebT-TW-yIJ" firstAttribute="leading" secondItem="ddt-VK-yCI" secondAttribute="leading" constant="20" id="6KG-Ww-NGZ"/>
+                            <constraint firstItem="x2w-c2-HDD" firstAttribute="top" secondItem="ddt-VK-yCI" secondAttribute="top" constant="20" id="EwE-No-0Df"/>
+                            <constraint firstItem="ddt-VK-yCI" firstAttribute="bottom" secondItem="ebT-TW-yIJ" secondAttribute="bottom" constant="20" id="Loa-Xy-y4j"/>
+                            <constraint firstItem="x2w-c2-HDD" firstAttribute="leading" secondItem="ddt-VK-yCI" secondAttribute="leading" constant="20" id="Mqo-v0-ZL8"/>
+                            <constraint firstItem="ebT-TW-yIJ" firstAttribute="top" secondItem="x2w-c2-HDD" secondAttribute="bottom" constant="20" id="VSb-Yo-ncq"/>
+                            <constraint firstAttribute="trailing" secondItem="x2w-c2-HDD" secondAttribute="trailing" constant="20" id="uxA-jH-sTO"/>
+                            <constraint firstItem="ddt-VK-yCI" firstAttribute="trailing" secondItem="ebT-TW-yIJ" secondAttribute="trailing" constant="20" id="x4g-93-N4F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ddt-VK-yCI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h75-4f-ff9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="-282"/>
+        </scene>
+    </scenes>
+</document>

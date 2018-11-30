@@ -29,6 +29,7 @@ enum MainCellItem: String, CaseIterable {
     case replaySubject = "ReplaySubject"
     case behaviorSubject = "BehaviorSubject"
     case variable = "Variable [DEPRECATED]"
+    case behaviorRelay = "BehaviorRelay"
     case etc = "아직 입니다."
     
     var storyName: String? {
@@ -69,6 +70,8 @@ enum MainCellItem: String, CaseIterable {
             return "BehaviorSubject"
         case .variable:
             return "Variable"
+        case .behaviorRelay:
+            return "BehaviorRelay"
         default:
             return nil
         }
