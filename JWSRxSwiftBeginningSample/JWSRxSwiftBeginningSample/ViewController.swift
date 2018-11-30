@@ -19,7 +19,7 @@ enum MainCellItem: String, CaseIterable {
     case scan = "변환, scan(), reduce()"
     case flatMap = "변환, flatMap()"
     case filter = "filter()"
-    case zip = "zip()"
+    case zip = "결합, zip()"
     case gugudan = "구구단을 공부해 볼까요?"
     case interval = "생성, interval()"
     case timer = "생성, timer()"
@@ -31,8 +31,8 @@ enum MainCellItem: String, CaseIterable {
     case variable = "Variable [DEPRECATED]"
     case behaviorRelay = "BehaviorRelay"
     case publishRelay = "PublishRelay"
-    case concat = "Concat"
-    case etc = "아직 입니다."
+    case concat = "결합, Concat"
+    case etc = "계속 추가 중 입니다."
     
     var storyName: String? {
         switch self {
