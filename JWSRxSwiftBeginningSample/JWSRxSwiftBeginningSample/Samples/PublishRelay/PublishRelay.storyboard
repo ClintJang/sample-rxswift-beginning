@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Publish Relay View Controller-->
+        <scene sceneID="w1q-xS-OM2">
+            <objects>
+                <viewController storyboardIdentifier="PublishRelayViewController" id="mx3-kL-YL0" customClass="PublishRelayViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oXO-Ty-der">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf6-qC-bsP">
+                                <rect key="frame" x="20" y="40" width="335" height="101.5"/>
+                                <string key="text">PublishRelay 는 PublishSubject를 래핑한거죠. 사용을 위한 명칭이 조금 바뀌었지 거의 동일합니다.
+Relay의 특징이 있죠. error 나 complete 이 발생해도 계속 동작합니다.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9K8-ez-nIa">
+                                <rect key="frame" x="20" y="161.5" width="335" height="485.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <mutableString key="text">print("===============================")
+        print("\n\n")
+        
+        // frist subscribe
+        let subject = PublishRelay&lt;String&gt;()
+        subject.subscribe(onNext: { print("string frist: \($0)") },
+                                onError: { print("string frist: \($0)") },
+                                onCompleted: { print("string frist: onCompleted") }, onDisposed: { print("string frist: onDisposed")})
+            .disposed(by: disposeBag)
+        subject.accept("1")
+        subject.accept("2")
+        subject.accept("안녕하세요.")
+        
+        // second subscribe
+        subject.subscribe(onNext: { print("string second: \($0)") },
+                                onError: { print("string second: \($0)") },
+                                onCompleted: { print("string second: onCompleted") }, onDisposed: { print("string second: onDisposed")})
+            .disposed(by: disposeBag)
+        
+        subject.accept("3")
+        subject.accept("4")
+        subject.accept("반갑습니다.")
+        
+        // subjectString 은 뒤로가기 하면 string: onDisposed 가 호출 될 것 입니다.
+        
+        print("===============================")
+        print("\n\n")
+        
+        let subjectInt = PublishRelay&lt;Int&gt;()
+        subjectInt.subscribe(onNext: { print("Int: \($0)") },
+                             onError: { print("Int: \($0)") },
+                             onCompleted: { print("Int: onCompleted") }, onDisposed: { print("Int: onDisposed")})
+            .disposed(by: disposeBag)
+        
+        
+        subjectInt.accept(1)
+        subjectInt.accept(2)
+        subjectInt.accept(3)
+        subjectInt.accept(10)
+        subjectInt.accept(1000000)
+        
+        // PublishSubject 와 달리 PublishRelay는 onCompleted가 없죠.
+        
+        print("===============================")
+        print("\n\n")</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mf6-qC-bsP" firstAttribute="top" secondItem="QWy-3v-sav" secondAttribute="top" constant="20" id="73l-0f-EzZ"/>
+                            <constraint firstItem="QWy-3v-sav" firstAttribute="trailing" secondItem="9K8-ez-nIa" secondAttribute="trailing" constant="20" id="AYs-Bi-zKf"/>
+                            <constraint firstItem="QWy-3v-sav" firstAttribute="trailing" secondItem="mf6-qC-bsP" secondAttribute="trailing" constant="20" id="LTj-O7-ZPk"/>
+                            <constraint firstItem="mf6-qC-bsP" firstAttribute="leading" secondItem="QWy-3v-sav" secondAttribute="leading" constant="20" id="XtC-8k-oPU"/>
+                            <constraint firstItem="9K8-ez-nIa" firstAttribute="top" secondItem="mf6-qC-bsP" secondAttribute="bottom" constant="20" id="hXK-lB-FpK"/>
+                            <constraint firstItem="QWy-3v-sav" firstAttribute="bottom" secondItem="9K8-ez-nIa" secondAttribute="bottom" constant="20" id="hif-aJ-X1v"/>
+                            <constraint firstItem="9K8-ez-nIa" firstAttribute="leading" secondItem="QWy-3v-sav" secondAttribute="leading" constant="20" id="qjH-dV-GlM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QWy-3v-sav"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKP-lZ-qUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78" y="91"/>
+        </scene>
+    </scenes>
+</document>
