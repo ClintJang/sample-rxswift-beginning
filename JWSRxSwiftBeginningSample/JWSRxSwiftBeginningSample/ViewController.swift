@@ -31,6 +31,7 @@ enum MainCellItem: String, CaseIterable {
     case variable = "Variable [DEPRECATED]"
     case behaviorRelay = "BehaviorRelay"
     case publishRelay = "PublishRelay"
+    case concat = "Concat"
     case etc = "아직 입니다."
     
     var storyName: String? {
@@ -75,6 +76,8 @@ enum MainCellItem: String, CaseIterable {
             return "BehaviorRelay"
         case .publishRelay:
             return "PublishRelay"
+        case .concat:
+            return "Concat"
         default:
             return nil
         }

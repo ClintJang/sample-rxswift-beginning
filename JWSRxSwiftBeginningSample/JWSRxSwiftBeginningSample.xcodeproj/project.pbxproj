@@ -49,6 +49,8 @@
 		BCCEEF1E21B0D89C00AC44C3 /* BehaviorRelayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEEF1D21B0D89C00AC44C3 /* BehaviorRelayViewController.swift */; };
 		BCCEEF2121B10C8F00AC44C3 /* PublishRelay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCEEF2021B10C8F00AC44C3 /* PublishRelay.storyboard */; };
 		BCCEEF2321B10C9D00AC44C3 /* PublishRelayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCEEF2221B10C9D00AC44C3 /* PublishRelayViewController.swift */; };
+		BCDE982821B12972006615BC /* ConcatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE982721B12972006615BC /* ConcatViewController.swift */; };
+		BCDE982A21B1297E006615BC /* Concat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCDE982921B1297E006615BC /* Concat.storyboard */; };
 		BCE3061E2193F95C00611ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3061D2193F95C00611ADF /* AppDelegate.swift */; };
 		BCE306202193F95C00611ADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3061F2193F95C00611ADF /* ViewController.swift */; };
 		BCE306232193F95C00611ADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE306212193F95C00611ADF /* Main.storyboard */; };
@@ -102,6 +104,8 @@
 		BCCEEF1D21B0D89C00AC44C3 /* BehaviorRelayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorRelayViewController.swift; sourceTree = "<group>"; };
 		BCCEEF2021B10C8F00AC44C3 /* PublishRelay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PublishRelay.storyboard; sourceTree = "<group>"; };
 		BCCEEF2221B10C9D00AC44C3 /* PublishRelayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishRelayViewController.swift; sourceTree = "<group>"; };
+		BCDE982721B12972006615BC /* ConcatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcatViewController.swift; sourceTree = "<group>"; };
+		BCDE982921B1297E006615BC /* Concat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Concat.storyboard; sourceTree = "<group>"; };
 		BCE3061A2193F95C00611ADF /* JWSRxSwiftBeginningSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWSRxSwiftBeginningSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE3061D2193F95C00611ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE3061F2193F95C00611ADF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +323,15 @@
 			path = PublishRelay;
 			sourceTree = "<group>";
 		};
+		BCDE982621B1295A006615BC /* Concat */ = {
+			isa = PBXGroup;
+			children = (
+				BCDE982921B1297E006615BC /* Concat.storyboard */,
+				BCDE982721B12972006615BC /* ConcatViewController.swift */,
+			);
+			path = Concat;
+			sourceTree = "<group>";
+		};
 		BCE306112193F95C00611ADF = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +400,7 @@
 				BCCEEF1521B0AF5500AC44C3 /* Variable */,
 				BCCEEF1A21B0D85300AC44C3 /* BehaviorReplay */,
 				BCCEEF1F21B1022000AC44C3 /* PublishRelay */,
+				BCDE982621B1295A006615BC /* Concat */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -480,6 +494,7 @@
 				BC19290B2199904200690A73 /* Map.storyboard in Resources */,
 				BCCEEF2121B10C8F00AC44C3 /* PublishRelay.storyboard in Resources */,
 				BC2778AF219E1E540011D4EB /* README.md in Resources */,
+				BCDE982A21B1297E006615BC /* Concat.storyboard in Resources */,
 				BCC17E39219DC13700848071 /* Range.storyboard in Resources */,
 				BCB2890421A6C496007926A2 /* ConcatMap.storyboard in Resources */,
 				BCE306282193F95D00611ADF /* LaunchScreen.storyboard in Resources */,
@@ -564,6 +579,7 @@
 				BC359C4621A2A50C00DE22A5 /* FilterViewController.swift in Sources */,
 				BCCEEED321AF5CB200AC44C3 /* ReplaySubjectViewController.swift in Sources */,
 				BCCEEF1E21B0D89C00AC44C3 /* BehaviorRelayViewController.swift in Sources */,
+				BCDE982821B12972006615BC /* ConcatViewController.swift in Sources */,
 				BCCEEECE21AE5F6E00AC44C3 /* PublishSubjectViewController.swift in Sources */,
 				BCE3061E2193F95C00611ADF /* AppDelegate.swift in Sources */,
 				BCCEEF2321B10C9D00AC44C3 /* PublishRelayViewController.swift in Sources */,

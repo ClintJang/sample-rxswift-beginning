@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Concat View Controller-->
+        <scene sceneID="hGe-Kr-u3A">
+            <objects>
+                <viewController storyboardIdentifier="ConcatViewController" id="07z-vJ-teX" customClass="ConcatViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YWh-Sz-rqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4I-Tx-dYB">
+                                <rect key="frame" x="20" y="40" width="335" height="61"/>
+                                <string key="text">concat은 concatenate 의 줄인 표현이죠.
+concat 은 순서대로 연결 시켜줍니다. 로그를 보시죠~</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p4u-uK-h5h">
+                                <rect key="frame" x="20" y="121" width="335" height="526"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">print("===============================")
+
+        let firstSequence: Observable&lt;Int&gt; = Observable.range(start: 1, count: 5)
+        let secondSequence: Observable&lt;Int&gt; = Observable.from([6,7,8,9,10])
+        let thirdSequence: Observable&lt;Int&gt; = Observable.of(11, 12, 13, 14, 15)
+        
+        let _ = Observable.concat(firstSequence, secondSequence, thirdSequence)
+            .subscribe(
+                onNext: { print($0) },
+                onError: { print($0) },
+                onCompleted: { print("onCompleted") }) { print("onDisposed") }
+            .disposed(by: disposeBag)</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p4u-uK-h5h" firstAttribute="top" secondItem="G4I-Tx-dYB" secondAttribute="bottom" constant="20" id="CQj-kx-QUx"/>
+                            <constraint firstItem="G4I-Tx-dYB" firstAttribute="top" secondItem="Vyf-zy-e3t" secondAttribute="top" constant="20" id="Cco-hH-ZCd"/>
+                            <constraint firstItem="G4I-Tx-dYB" firstAttribute="leading" secondItem="Vyf-zy-e3t" secondAttribute="leading" constant="20" id="PtE-bm-JeW"/>
+                            <constraint firstItem="Vyf-zy-e3t" firstAttribute="trailing" secondItem="G4I-Tx-dYB" secondAttribute="trailing" constant="20" id="TK9-BT-rDw"/>
+                            <constraint firstItem="p4u-uK-h5h" firstAttribute="leading" secondItem="Vyf-zy-e3t" secondAttribute="leading" constant="20" id="eZF-0N-fmf"/>
+                            <constraint firstItem="Vyf-zy-e3t" firstAttribute="trailing" secondItem="p4u-uK-h5h" secondAttribute="trailing" constant="20" id="mPl-tw-UBo"/>
+                            <constraint firstItem="Vyf-zy-e3t" firstAttribute="bottom" secondItem="p4u-uK-h5h" secondAttribute="bottom" constant="20" id="y2k-b9-pEY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vyf-zy-e3t"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Dm-Y9-2VJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="-336"/>
+        </scene>
+    </scenes>
+</document>
