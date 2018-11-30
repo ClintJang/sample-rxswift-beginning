@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Variable View Controller-->
+        <scene sceneID="oT9-Zk-dWr">
+            <objects>
+                <viewController storyboardIdentifier="VariableViewController" id="2yY-aU-M9w" customClass="VariableViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="trU-Kx-CEp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Variable 은 Depricated 되었네요. BehaivorReplay를 사용해주세요. 혹시 실행이 궁금하면, 소스는 주석으로 해두었는 데, 주석 풀고 실행을 다시해서 로그를 확인해주세요. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZG-lb-MlM">
+                                <rect key="frame" x="20" y="40" width="335" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HZG-lb-MlM" firstAttribute="top" secondItem="4Ym-8I-DOI" secondAttribute="top" constant="20" id="ID0-3k-1Cq"/>
+                            <constraint firstItem="HZG-lb-MlM" firstAttribute="leading" secondItem="4Ym-8I-DOI" secondAttribute="leading" constant="20" id="wLv-fu-nLH"/>
+                            <constraint firstAttribute="trailing" secondItem="HZG-lb-MlM" secondAttribute="trailing" constant="20" id="yEA-vZ-POj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Ym-8I-DOI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3zr-Db-QG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318" y="-236"/>
+        </scene>
+    </scenes>
+</document>
