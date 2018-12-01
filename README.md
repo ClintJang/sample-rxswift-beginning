@@ -264,12 +264,74 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 
 - [IntervalViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Interval/IntervalViewController.swift)
 
+	```swift
+	.. (중략) ..
+	print("===============================")
+	        print("첫번째 Interval 실행")
+	        print("서브스크라이브 되서, 2초 후 부터 반복")
+	        print("\n\n")
+	        
+	let intervalFirst = 2 // 2초에 한번씩
+	        
+    Observable<Int>.interval(RxTimeInterval(intervalFirst), scheduler: MainScheduler.instance)
+//            .debug()
+        .subscribe({ print("첫번째:\($0)") })
+        .disposed(by: disposeBag)
+    
+    print("===============================")
+    print("두번째 Interval 실행")
+    print("서브스크라이브 되서, 3초 후 부터 반복, 5회만 반복")
+    print("\n\n")
+	
+    let intervalSecond = 3 // 3초에 한번씩
+    
+    Observable<Int>.interval(RxTimeInterval(intervalSecond), scheduler: MainScheduler.instance)
+        .map({ $0 + 1000 }) // 1000, 1001, 1002...
+        .take(5) // 5회
+        .subscribe({ print("두번째:\($0)") })
+        .disposed(by: disposeBag)
+    
+	.. (중략) ..
+    
+	```
+
 #### Timer
 > http://reactivex.io/documentation/operators/timer.html
 
 <img src="http://reactivex.io/documentation/operators/images/timer.c.png" width="300" />
 
 - [TimerViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Timer/TimerViewController.swift)
+
+	```swift
+	.. (중략) ..
+	print("===============================")
+	print("첫번째 Timer 실행")
+	print("서브스크라이브 되서, 2초 후 부터 실행")
+	print("\n\n")
+	    
+	let intervalFirst = 2 // 2초에 한번씩
+	    
+	Observable<Int>.timer(RxTimeInterval(intervalFirst), scheduler: MainScheduler.instance)
+	    //            .debug()
+	    .subscribe({ print("첫번째:\($0)") })
+	    .disposed(by: disposeBag)
+	    
+	print("===============================")
+	print("두번째 Timer 실행")
+	print("서브스크라이브 되서, 3초 후 에 실행")
+	print("\n\n")
+	    
+	let intervalSecond = 3 // 3초에 한번씩
+	    
+	Observable<Int>.timer(RxTimeInterval(intervalSecond), scheduler: MainScheduler.instance)
+	    .map({ $0 + 1000 }) // 1000, 1001, 1002...
+	    .subscribe({ print("두번째:\($0)") })
+	    .disposed(by: disposeBag)
+	    
+	print("===============================")
+	print("\n\n")
+	.. (중략) ..
+	```
 
 ### [Transforming Observables](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#transforming-observables)
 
