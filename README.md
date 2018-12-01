@@ -111,10 +111,32 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 	- 만약 해지 하고 싶은 대상의 disposeBag에 담으면, 그 대상이 메모리 해지 될때(dealloc) 담겨있는 disposable이 해지됩니다.
 - 해지가 안되면 메모리 릭이 발생하겠죠.
 
-## Just
-## From
-## Scan
-## Map
-## FlatMap
+## Subject
+
+### PublishSubject
+- [PublishSubjectViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/PublishSubject/PublishSubjectViewController.swift)
+
+### BehaviorSubject
+- [BehaviorSubjectViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/BehaviorSubject/BehaviorSubjectViewController.swift)
+
+### ReplaySubject
+- [ReplaySubjectViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/ReplaySubject/ReplaySubjectViewController.swift)
+
+## Relay
+### PublishRelay
+- [PublishRelayViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/PublishRelay/PublishRelayViewController.swift)
+
+### BehaviorRelay
+- [BehaviorRelayViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/BehaviorReplay/BehaviorRelayViewController.swift)
+
+## Operator
+
+### Just
+- [JustViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Just/JustViewController.swift)
+
+### From
+### Scan
+### Map
+### FlatMap
 
 .. 공부합시다.
