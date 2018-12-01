@@ -96,6 +96,11 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 # 기본 용어
 
 ## Observable
+> ReactiveX에서 Observable은 Observer를 구독합니다. <br />
+그런 다음 Observer는 Observable Sequence에 따라 반응합니다.
+
+<img src="http://reactivex.io/assets/operators/legend.png" width="400" />
+
 - 데이터 발행자 : 가장 핵심적인 개념이며, 이벤트를 시간의 흐름에 따라 전달하는 전달자 입니다.데이터의 변화가 발행하는 데이터 소스 입니다.
 - 비동기적으로 다수의 이벤트를 다루는 방법입니다.
 - 옵저버 패턴의 확장이라 생각하면 됩니다.
@@ -112,17 +117,28 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - 해지가 안되면 메모리 릭이 발생하겠죠.
 
 ## Subject
+> http://reactivex.io/documentation/subject.html
 
 ### PublishSubject
+
+<img src="http://reactivex.io/documentation/operators/images/S.PublishSubject.png" width="300" />
+
 - [PublishSubjectViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/PublishSubject/PublishSubjectViewController.swift)
 
 ### BehaviorSubject
+
+<img src="http://reactivex.io/documentation/operators/images/S.BehaviorSubject.png" width="300" />
+
 - [BehaviorSubjectViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/BehaviorSubject/BehaviorSubjectViewController.swift)
 
 ### ReplaySubject
+
+<img src="http://reactivex.io/documentation/operators/images/S.ReplaySubject.png" width="300" />
+
 - [ReplaySubjectViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/ReplaySubject/ReplaySubjectViewController.swift)
 
 ## Relay
+
 ### PublishRelay
 - [PublishRelayViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/PublishRelay/PublishRelayViewController.swift)
 
@@ -346,10 +362,14 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 #### Scan
 > http://reactivex.io/documentation/operators/scan.html
 
+<img src="http://reactivex.io/documentation/operators/images/scan.c.png" width="300" />
+
 - [ScanViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Scan/ScanViewController.swift)
 
 #### Map
 > http://reactivex.io/documentation/operators/map.html
+
+<img src="http://reactivex.io/documentation/operators/images/map.c.png" width="300" />
 
 - [MapViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Map/MapViewController.swift)
 
