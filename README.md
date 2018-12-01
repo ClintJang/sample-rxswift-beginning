@@ -129,14 +129,54 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 ### BehaviorRelay
 - [BehaviorRelayViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/BehaviorReplay/BehaviorRelayViewController.swift)
 
+### ~~Variable~~ : DEPRECATED
+> ~~Variable~~ => BehaviorRelay
+- [VariableViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Variable/VariableViewController.swift)
+
 ## Operator
+
+### Create
+- [CreateViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Create/CreateViewController.swift)
 
 ### Just
 - [JustViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Just/JustViewController.swift)
 
 ### From
-### Scan
-### Map
-### FlatMap
 
-.. 공부합시다.
+### Range
+- [RangeViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Range/RangeViewController.swift)
+
+### Scan
+- [ScanViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Scan/ScanViewController.swift)
+
+### Map
+- [MapViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Map/MapViewController.swift)
+
+### Filter
+- [FilterViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Filter/FilterViewController.swift)
+
+### Concat
+- [ConcatViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Concat/ConcatViewController.swift)
+
+### Deferred
+- [DeferredViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Defer/DeferredViewController.swift)
+
+### Interval
+- [IntervalViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Interval/IntervalViewController.swift)
+
+### Timer
+- [TimerViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Timer/TimerViewController.swift)
+
+### Of
+- [OfViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Of/OfViewController.swift)
+
+### FlatMap
+- [FlatMapViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/FlatMap/FlatMapViewController.swift)
+
+### ConcatMap
+- [ConcatMapViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/ConcatMap/ConcatMapViewController.swift)
+
+### Zip
+- [ZipViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Zip/ZipViewController.swift)
+
+.. 계속 공부합시다.
