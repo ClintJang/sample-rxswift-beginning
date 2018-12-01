@@ -150,7 +150,7 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - [JustViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Just/JustViewController.swift)
 
 	```swift 
-	.. 중략 ..
+	.. (중략) ..
 	
     Observable.just(1)
         .subscribe(onNext:{ print($0) },
@@ -170,7 +170,7 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
                    onCompleted:{ print("onCompleted")})
         .disposed(by: disposeBag)
 	
-    let service :Observable<Int> = Observable.just(99)
+    let service: Observable<Int> = Observable.just(99)
     service.subscribe(onNext:{ print($0) },
                       onError:{ print($0) },
                       onCompleted:{ print("onCompleted")})
@@ -186,6 +186,24 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 
 - [FromViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/From/FromViewController.swift)
 
+	```swift
+	.. (중략) ..
+	
+	Observable.from([1,2,3])
+        .subscribe(onNext:{ print($0) },
+                   onError: { print($0) },
+                   onCompleted: {print("onCompleted")})
+        .disposed(by:disposeBag)
+    
+    Observable.from(["기억","니은","디긋", "ㅎㅎㅎ"])
+        .subscribe(onNext:{ print($0) },
+                   onError: { print($0) },
+                   onCompleted: {print("onCompleted")})
+        .disposed(by:disposeBag)
+        
+	.. (중략) ..
+	```
+
 #### Range
 > http://reactivex.io/documentation/operators/range.html
 
@@ -193,13 +211,51 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 
 - [RangeViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Range/RangeViewController.swift)
 
-#### Deferred
+	```swift
+	.. (중략) ..
+	
+	Observable.range(start: 1, count: 4)
+	            .subscribe(onNext: { print("onNext::\($0)") },
+	                       onError: { print($0)},
+	                       onCompleted: { print("onCompleted") })
+	            .disposed(by: disposeBag)
+	            
+	.. (중략) ..
+	```
+
+#### Defer (Deferred)
 > http://reactivex.io/documentation/operators/defer.html
 
 <img src="http://reactivex.io/documentation/operators/images/defer.c.png" width="300" />
 
 - [DeferredViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Defer/DeferredViewController.swift)
 
+	```swift
+	.. (중략) ..
+	        
+	let deferred = Observable<String>.deferred {
+	    
+	    // just("defer")의 실행을 늦춰보자!!
+	    Observable<String>.just("defer").debug()
+	}
+	    
+	// 딜레이 시키고 싶은 시간을 정하자
+	let delayTime = 3.0
+	print("== \(delayTime) 초 뒤에 subscribe 를 실행 할 것이고")
+	print("== 그때!! Observable<String>.just(..).debug() 가 실행 될 것입니다.")
+	print("\n\n")
+	
+	    
+	// 3초 뒤에 "Observable<String>.just("defer").debug()" 실행
+	DispatchQueue.main.asyncAfter(deadline: .now() + delayTime) { [weak self] in
+	    if let strongSelf = self {
+	        deferred.subscribe(onNext:{ print($0) })
+	            .disposed(by: strongSelf.disposeBag)
+	    }
+	}
+	        
+	.. (중략) ..
+	```
 
 #### Interval
 > http://reactivex.io/documentation/operators/interval.html
@@ -209,6 +265,10 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - [IntervalViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Interval/IntervalViewController.swift)
 
 #### Timer
+> http://reactivex.io/documentation/operators/timer.html
+
+<img src="http://reactivex.io/documentation/operators/images/timer.c.png" width="300" />
+
 - [TimerViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Timer/TimerViewController.swift)
 
 ### [Transforming Observables](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#transforming-observables)
