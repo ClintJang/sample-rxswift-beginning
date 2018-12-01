@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--From View Controller-->
+        <scene sceneID="xir-Ur-TnW">
+            <objects>
+                <viewController storyboardIdentifier="FromViewController" id="cYa-Sn-IFb" customClass="FromViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WmC-sN-7Zu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From 은.. 정리중" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aca-Bz-o9z">
+                                <rect key="frame" x="20" y="40" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Pd-yI-2Xv">
+                                <rect key="frame" x="20" y="81" width="335" height="566"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">print("===============================")
+        print("\n\n")
+        
+        Observable.from([1,2,3])
+            .subscribe(onNext:{ print($0) },
+                       onError: { print($0) },
+                       onCompleted: {print("onCompleted")})
+            .disposed(by:disposeBag)
+        
+        print("===============================")
+        print("\n\n")
+        
+        Observable.from(["기억","니은","디긋", "ㅎㅎㅎ"])
+            .subscribe(onNext:{ print($0) },
+                       onError: { print($0) },
+                       onCompleted: {print("onCompleted")})
+            .disposed(by:disposeBag)
+        
+        print("===============================")
+        print("\n\n")</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LJS-0r-t8c" firstAttribute="trailing" secondItem="1Pd-yI-2Xv" secondAttribute="trailing" constant="20" id="9aB-u7-fU8"/>
+                            <constraint firstItem="1Pd-yI-2Xv" firstAttribute="leading" secondItem="LJS-0r-t8c" secondAttribute="leading" constant="20" id="CrS-Ht-ASL"/>
+                            <constraint firstItem="LJS-0r-t8c" firstAttribute="trailing" secondItem="aca-Bz-o9z" secondAttribute="trailing" constant="20" id="EHa-RX-PUJ"/>
+                            <constraint firstItem="aca-Bz-o9z" firstAttribute="top" secondItem="LJS-0r-t8c" secondAttribute="top" constant="20" id="F1r-TS-d2n"/>
+                            <constraint firstItem="1Pd-yI-2Xv" firstAttribute="top" secondItem="aca-Bz-o9z" secondAttribute="bottom" constant="20" id="cPX-Xm-IYc"/>
+                            <constraint firstItem="aca-Bz-o9z" firstAttribute="leading" secondItem="LJS-0r-t8c" secondAttribute="leading" constant="20" id="dVi-HP-8Ou"/>
+                            <constraint firstItem="LJS-0r-t8c" firstAttribute="bottom" secondItem="1Pd-yI-2Xv" secondAttribute="bottom" constant="20" id="jkh-T8-nQq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LJS-0r-t8c"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tI8-jo-xzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="100"/>
+        </scene>
+    </scenes>
+</document>

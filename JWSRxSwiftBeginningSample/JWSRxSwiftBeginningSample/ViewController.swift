@@ -42,6 +42,8 @@ enum MainCellItem: String, CaseIterable {
             return "Create"
         case .just:
             return "Just"
+        case .from:
+            return "From"
         case .of:
             return "Of"
         case .range:

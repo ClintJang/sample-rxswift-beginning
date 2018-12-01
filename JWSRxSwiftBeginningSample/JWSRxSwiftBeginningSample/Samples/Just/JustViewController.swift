@@ -8,11 +8,7 @@
 
 import UIKit
 
-//http://reactivex.io/documentation/operators/just.html
-
-struct Singer {
-    var score: Variable<Int>
-}
+// http://reactivex.io/documentation/operators/just.html
 
 final class JustViewController: BaseViewController {
 
