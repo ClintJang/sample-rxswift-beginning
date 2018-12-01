@@ -1,13 +1,14 @@
 # RxSwift Beginning Sample
 
-`RxSwift` 공부하자!
-> RX : **R**eactive E**x**tensions
+[`RxSwift` 공부하자!](https://medium.com/@jang.wangsu/rxswift-rxswift-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-4b5187d07a33) 
+
+> Rx : **R**eactive e**X**tensions
 리엑티브 프로그래밍 패러다임이고, 데이터 흐름과 그 데이터의 변경에 따라 전달 되는 것을 중요시 생각하는 패러다임 같습니다. 
 >> 관련 어려운 단어! <br />
 >> Reactive Programming (RP) <br />
 >> Functional + RX = Functional Reactive Programming(FRP) <br />
 >> Language-Intergrated Query (LINQ) <br />
->>  왜 공부해야되지?
+>>  왜 이리 공부하기 힘들지?
 
 ```
 ReactiveX
@@ -31,6 +32,7 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 
 
 # 장점
+- [** ☆ Rx에겐 특별한 것이 있다. ☆ **](https://iamchiwon.github.io/2018/11/29/rxhasmore/) : 특별합니다.!!
 - 높은 가독성이 있습니다.
   - 코드가 기존 방식에 비해 간결해 진다고 합니다.
 - 유지보수에 좋습니다.
@@ -45,19 +47,29 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 # 단점
 - 러닝 커브가 높습니다.
 
-# 좋은 링크
+# 링크
 - FRP의 구현체 : http://reactivex.io/
     - https://github.com/ReactiveX
 - 사용/활용법을 알아야죠? : http://www.rxmarbles.com/
     - 필요한 오퍼레이터 들이 있고, 이해하기 좋게 조작해 볼 수 있습니다. 
 
 # 좋은 블러그
-- 마기님 : https://magi82.github.io/ios-rxswift-01/
-- Wade님 : https://brunch.co.kr/@tilltue/2
-- tilltue님 : https://brunch.co.kr/@tilltue/6
+- ClintJang
+	- [RxSwift 시작하기](https://medium.com/@jang.wangsu/rxswift-rxswift-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-4b5187d07a33)
+	- [RxSwift란? ReactiveX 란?](https://medium.com/@jang.wangsu/rxswift-rxswift%EB%9E%80-reactivex-%EB%9E%80-b21f75e34c10)
+	- [RxSwift에서 시퀀스(sequence)란?](https://medium.com/@jang.wangsu/rxswift-rxswift%EC%97%90%EC%84%9C-%EC%8B%9C%ED%80%80%EC%8A%A4-sequence-%EB%9E%80-6d3fd2b14c29)
+	
+- 마기님
+	- [RxSwift에 대해서 알아보기(ReactiveX 에 대해서) - 01](https://magi82.github.io/ios-rxswift-01/)
+	- [RxSwift에 대해서 알아보기(Observable에 대해서) - 02](https://magi82.github.io/ios-rxswift-02/)
+- [Wade님](https://brunch.co.kr/@tilltue/2) 
 - 민소네님
-	- [[Swift4][ReactiveX]RxSwift를 직접 구현해보기 - Event, Disposable, Observer, Observable](http://minsone.github.io/programming/swift4-implement-own-rx-event-disposable-observer-observable)
-	- http://minsone.github.io/programming/rxswift-observable-of-delegate-callback
+	- [RxSwift를 직접 구현해보기 - Event, Disposable, Observer, Observable](http://minsone.github.io/programming/swift4-implement-own-rx-event-disposable-observer-observable)
+	- [Closure, Delegate 대신 Observable을 사용해서 응답값을 쉽게 처리하기](http://minsone.github.io/programming/rxswift-observable-of-delegate-callback)
+- Kanghoon님
+	- [#1 — RxSwift 시작하기](https://medium.com/@ggaa96/rxswift-1-rxswift-%EC%9E%85%EB%AC%B8-67bfdbd91969)
+	- [#2 — Observable 과 Subject (+ Relay) 알아보기](https://medium.com/@ggaa96/rxswift-2-observable-subject-relay-8fcd9b01913d)
+	- [#3 — Operator 에 대해 알아보자](https://medium.com/@ggaa96/rxswift-3-learn-about-operators-99bd1c44a5f9)
 - https://pilgwon.github.io/blog/2017/09/21/why-rxswift.html
 - http://mobicon.tistory.com/467
 
@@ -76,13 +88,12 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - [RxCocoa](https://github.com/ReactiveX/RxSwift/tree/master/RxCocoa) : 기존 Cocoa 프레임 워크를 Rx로 래핑한 프래임워크
 
 ## 네트워크
+> 아직은 적용한 셈플은 없음.
+
 - [RxAlamofire](https://github.com/RxSwiftCommunity/RxAlamofire) : Swift Alamofire를 RxSwift로 감싼 HTTP 네트워킹 라이브러리
 
 
 # 기본 용어
-
-## Sequence
-- [Sequences 란?](https://medium.com/@jang.wangsu/rxswift-rxswift%EC%97%90%EC%84%9C-%EC%8B%9C%ED%80%80%EC%8A%A4-sequence-%EB%9E%80-6d3fd2b14c29) : 자주 언급되는 기본 용어이죠? 데이터 타입니다. 링크 안에 내용을 정리해봤습니다.
 
 ## Observable
 - 데이터 발행자 : 가장 핵심적인 개념이며, 이벤트를 시간의 흐름에 따라 전달하는 전달자 입니다.데이터의 변화가 발행하는 데이터 소스 입니다.
@@ -99,10 +110,6 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - disposeBag 은 disposable 들을 담아두는 것을 말합니다.
 	- 만약 해지 하고 싶은 대상의 disposeBag에 담으면, 그 대상이 메모리 해지 될때(dealloc) 담겨있는 disposable이 해지됩니다.
 - 해지가 안되면 메모리 릭이 발생하겠죠.
-
-
-# 기본 Operator
-> 아직 공부 중입니다. 😭
 
 ## Just
 ## From
