@@ -134,7 +134,7 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - [VariableViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Variable/VariableViewController.swift)
 
 ## Operator
-### Creating Observables
+### [Creating Observables](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#creating-observables)
 #### Create
 > http://reactivex.io/documentation/operators/create.html
 
@@ -148,6 +148,36 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 <img src="http://reactivex.io/documentation/operators/images/just.c.png" width="300" />
 
 - [JustViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Just/JustViewController.swift)
+
+	```swift 
+	.. 중략 ..
+	
+    Observable.just(1)
+        .subscribe(onNext:{ print($0) },
+                   onError: { print($0) },
+                   onCompleted: {print("onCompleted")})
+        .disposed(by:disposeBag)
+    
+    Observable.just("안녕하세요.")
+        .subscribe(onNext:{ print($0) },
+                   onError:{ print($0) },
+                   onCompleted:{ print("onCompleted")})
+        .disposed(by: disposeBag)
+    
+    Observable.just([1,2,3,4])
+        .subscribe(onNext:{ print($0) },
+                   onError:{ print($0) },
+                   onCompleted:{ print("onCompleted")})
+        .disposed(by: disposeBag)
+	
+    let service :Observable<Int> = Observable.just(99)
+    service.subscribe(onNext:{ print($0) },
+                      onError:{ print($0) },
+                      onCompleted:{ print("onCompleted")})
+        .disposed(by: disposeBag)
+        
+   .. (중략) ..
+	```
 
 #### From
 > http://reactivex.io/documentation/operators/from.html
@@ -164,16 +194,24 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - [RangeViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Range/RangeViewController.swift)
 
 #### Deferred
+> http://reactivex.io/documentation/operators/defer.html
+
+<img src="http://reactivex.io/documentation/operators/images/defer.c.png" width="300" />
+
 - [DeferredViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Defer/DeferredViewController.swift)
 
 
 #### Interval
+> http://reactivex.io/documentation/operators/interval.html
+
+<img src="http://reactivex.io/documentation/operators/images/interval.c.png" width="300" />
+
 - [IntervalViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Interval/IntervalViewController.swift)
 
-### Timer
+#### Timer
 - [TimerViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Timer/TimerViewController.swift)
 
-### Transforming Observables
+### [Transforming Observables](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#transforming-observables)
 
 #### Scan
 - [ScanViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Scan/ScanViewController.swift)
@@ -181,37 +219,39 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 #### Map
 - [MapViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Map/MapViewController.swift)
 
-### FlatMap
+#### FlatMap
 - [FlatMapViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/FlatMap/FlatMapViewController.swift)
 
-### ConcatMap
+#### ConcatMap
 - [ConcatMapViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/ConcatMap/ConcatMapViewController.swift)
 
-### Filtering Observables
+### [Filtering Observables](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#filtering-observables)
 
 #### Filter
 - [FilterViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Filter/FilterViewController.swift)
 
-### Combining Observables
+### [Combining Observables](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#combining-observables)
 
-### Zip
+#### Zip
 - [ZipViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Zip/ZipViewController.swift)
 
-### Of
+#### Of
 - [OfViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Of/OfViewController.swift)
 
-### Error Handling Operators
+### [Error Handling Operators](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#error-handling-operators)
 > 아직
 
-### Observable Utility Operators
+### [Observable Utility Operators](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#observable-utility-operators)
 > 아직
 
-### Conditional and Boolean Operators
+### [Conditional and Boolean Operators](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#conditional-and-boolean-operators)
 > 아직
 
-### Mathematical and Aggregate Operators
+### [Mathematical and Aggregate Operators](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#mathematical-and-aggregate-operators)
 
 #### Concat
+> http://reactivex.io/documentation/operators/concat.html
+
 - [ConcatViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Concat/ConcatViewController.swift)
 
 
