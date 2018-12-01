@@ -275,7 +275,6 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
     let intervalFirst = 2 // 2초에 한번씩
     
     Observable<Int>.interval(RxTimeInterval(intervalFirst), scheduler: MainScheduler.instance)
-//            .debug()
         .subscribe({ print("첫번째:\($0)") })
         .disposed(by: disposeBag)
     
