@@ -336,15 +336,28 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 	.. (중략) ..
 	```
 
+#### Repeat (RepeatElement)
+> http://reactivex.io/documentation/operators/repeat.html
+
+.. 아직
+
 ### [Transforming Observables](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#transforming-observables)
 
 #### Scan
+> http://reactivex.io/documentation/operators/scan.html
+
 - [ScanViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Scan/ScanViewController.swift)
 
 #### Map
+> http://reactivex.io/documentation/operators/map.html
+
 - [MapViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Map/MapViewController.swift)
 
 #### FlatMap
+> http://reactivex.io/documentation/operators/flatmap.html
+
+<img src="http://reactivex.io/documentation/operators/images/flatMap.c.png" width="300" />
+
 - [FlatMapViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/FlatMap/FlatMapViewController.swift)
 
 #### ConcatMap
@@ -353,14 +366,23 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 ### [Filtering Observables](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#filtering-observables)
 
 #### Filter
+> http://reactivex.io/documentation/operators/filter.html
+
+<img src="http://reactivex.io/documentation/operators/images/filter.c.png" width="300" />
+
 - [FilterViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Filter/FilterViewController.swift)
 
 ### [Combining Observables](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#combining-observables)
 
 #### Zip
+> http://reactivex.io/documentation/operators/zip.html
+
+<img src="http://reactivex.io/documentation/operators/images/zip.c.png" width="300" />
+
 - [ZipViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Zip/ZipViewController.swift)
 
 #### Of
+
 - [OfViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Of/OfViewController.swift)
 
 ### [Error Handling Operators](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#error-handling-operators)
@@ -379,6 +401,19 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 
 - [ConcatViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Concat/ConcatViewController.swift)
 
-
+	```swift
+	.. (중략) ..
+	let firstSequence: Observable<Int> = Observable.range(start: 1, count: 5)
+	let secondSequence: Observable<Int> = Observable.from([6,7,8,9,10])
+	let thirdSequence: Observable<Int> = Observable.of(11, 12, 13, 14, 15)
+	    
+	let _ = Observable.concat(firstSequence, secondSequence, thirdSequence)
+	    .subscribe(
+	        onNext: { print($0) },
+	        onError: { print($0) },
+	        onCompleted: { print("onCompleted") }) { print("onDisposed") }
+	    .disposed(by: disposeBag)
+	.. (중략) ..
+	```
 
 .. 계속 공부합시다.
