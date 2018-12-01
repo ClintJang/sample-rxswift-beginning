@@ -45,7 +45,7 @@ final class JustViewController: BaseViewController {
         print("===============================")
         print("\n\n")
         
-        let service :Observable<Int> = Observable.just(99)
+        let service: Observable<Int> = Observable.just(99)
         service.subscribe(onNext:{ print($0) },
                           onError:{ print($0) },
                           onCompleted:{ print("onCompleted")})
