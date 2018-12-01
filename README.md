@@ -139,9 +139,14 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - [CreateViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Create/CreateViewController.swift)
 
 ### Just
+> http://reactivex.io/documentation/operators/just.html
+
+<img src="http://reactivex.io/documentation/operators/images/just.c.png"></img>
+
 - [JustViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Just/JustViewController.swift)
 
 ### From
+- [FromViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/From/FromViewController.swift)
 
 ### Range
 - [RangeViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Range/RangeViewController.swift)
