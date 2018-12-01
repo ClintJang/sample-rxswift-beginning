@@ -138,6 +138,7 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - [ReplaySubjectViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/ReplaySubject/ReplaySubjectViewController.swift)
 
 ## Relay
+> Subject를 Wrapping 하고 있고, dispose 되기 전까지 계속 작동하는 특징이 있죠.
 
 ### PublishRelay
 - [PublishRelayViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/PublishRelay/PublishRelayViewController.swift)
