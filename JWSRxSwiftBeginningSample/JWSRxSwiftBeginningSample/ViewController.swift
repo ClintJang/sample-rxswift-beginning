@@ -32,6 +32,7 @@ enum MainCellItem: String, CaseIterable {
     case behaviorRelay = "BehaviorRelay"
     case publishRelay = "PublishRelay"
     case concat = "결합, Concat"
+    case throttle = "Throttle()"
     case etc = "계속 추가 중 입니다."
     
     var storyName: String? {
@@ -80,6 +81,8 @@ enum MainCellItem: String, CaseIterable {
             return "PublishRelay"
         case .concat:
             return "Concat"
+        case .throttle:
+            return "Throttle"
         default:
             return nil
         }

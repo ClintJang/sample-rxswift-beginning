@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		73EB3AF4862F18D550D098B0 /* Pods_JWSRxSwiftBeginningSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF64E9601F7355911728BA8 /* Pods_JWSRxSwiftBeginningSample.framework */; };
+		BC18745A21BA16C700AD3A01 /* Throttle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC18745921BA16C700AD3A01 /* Throttle.storyboard */; };
+		BC18745C21BA178100AD3A01 /* ThrottleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18745B21BA178100AD3A01 /* ThrottleViewController.swift */; };
 		BC19290421996CFA00690A73 /* FlatMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC19290321996CFA00690A73 /* FlatMap.storyboard */; };
 		BC19290621996D0F00690A73 /* FlatMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC19290521996D0F00690A73 /* FlatMapViewController.swift */; };
 		BC1929092199902A00690A73 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1929082199902A00690A73 /* MapViewController.swift */; };
@@ -65,6 +67,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC18745921BA16C700AD3A01 /* Throttle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Throttle.storyboard; sourceTree = "<group>"; };
+		BC18745B21BA178100AD3A01 /* ThrottleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrottleViewController.swift; sourceTree = "<group>"; };
 		BC19290321996CFA00690A73 /* FlatMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlatMap.storyboard; sourceTree = "<group>"; };
 		BC19290521996D0F00690A73 /* FlatMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapViewController.swift; sourceTree = "<group>"; };
 		BC1929082199902A00690A73 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,15 @@
 				EDEB0E7C9814C92094511CE6 /* Pods-JWSRxSwiftBeginningSample.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC18745821BA16AD00AD3A01 /* Throttle */ = {
+			isa = PBXGroup;
+			children = (
+				BC18745921BA16C700AD3A01 /* Throttle.storyboard */,
+				BC18745B21BA178100AD3A01 /* ThrottleViewController.swift */,
+			);
+			path = Throttle;
 			sourceTree = "<group>";
 		};
 		BC19290221996CD300690A73 /* FlatMap */ = {
@@ -415,6 +428,7 @@
 				BCCEEF1A21B0D85300AC44C3 /* BehaviorReplay */,
 				BCCEEF1F21B1022000AC44C3 /* PublishRelay */,
 				BCDE982621B1295A006615BC /* Concat */,
+				BC18745821BA16AD00AD3A01 /* Throttle */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -514,6 +528,7 @@
 				BCE306282193F95D00611ADF /* LaunchScreen.storyboard in Resources */,
 				BCC17E2F219DA31E00848071 /* Zip.storyboard in Resources */,
 				BCE306402194274E00611ADF /* Start.storyboard in Resources */,
+				BC18745A21BA16C700AD3A01 /* Throttle.storyboard in Resources */,
 				BCAEBD8E21955A5200992902 /* Scan.storyboard in Resources */,
 				BCB288FF21A54362007926A2 /* Deferred.storyboard in Resources */,
 				BCE306252193F95D00611ADF /* Assets.xcassets in Resources */,
@@ -580,6 +595,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC18745C21BA178100AD3A01 /* ThrottleViewController.swift in Sources */,
 				BCCEEF1921B0B11200AC44C3 /* VariableViewController.swift in Sources */,
 				BC2778B6219E21A90011D4EB /* GugudanViewController.swift in Sources */,
 				BCC17E31219DA34200848071 /* ZipViewController.swift in Sources */,

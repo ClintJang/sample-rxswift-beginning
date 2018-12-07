@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Throttle View Controller-->
+        <scene sceneID="NN1-qU-kqW">
+            <objects>
+                <viewController storyboardIdentifier="ThrottleViewController" id="Ang-0W-2D5" customClass="ThrottleViewController" customModule="JWSRxSwiftBeginningSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kpy-DZ-VpY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Throttle 은 지정한 시간 동안 생긴 옵저버블 아이템 중 마지막 것을 선택해서 돌려줍니다." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy7-WE-aFn">
+                                <rect key="frame" x="20" y="40" width="335" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J3J-sz-dP5">
+                                <rect key="frame" x="20" y="101" width="335" height="546"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">// For Test
+        let dueTime = 0.1
+
+        print("none throttle ===============================")
+
+        Observable.range(start: 0, count: 10)
+            .subscribe(onNext:{ print("none, \(Date()),\($0)") },
+                       onCompleted: { print("none, onCompleted") })
+            .disposed(by: disposeBag)
+
+        print("1st ===============================")
+
+        Observable.range(start: 0, count: 10)
+            .throttle(dueTime, scheduler: MainScheduler.instance)
+            .subscribe(onNext:{ print("1st, \(Date()),\($0)") },
+                       onCompleted: { print("1st, onCompleted") })
+            .disposed(by: disposeBag)
+        
+        print("2nd ===============================")
+        
+        Observable.range(start: 0, count: 100)
+            .throttle(dueTime, scheduler: MainScheduler.instance)
+            .subscribe(onNext:{ print("2st, \(Date()),\($0)") },
+                       onCompleted: { print("2st, onCompleted") })
+            .disposed(by: disposeBag)
+        
+        print("3th ===============================")
+
+        Observable.range(start: 0, count: 1000)
+            .throttle(dueTime, scheduler: MainScheduler.instance)
+            .subscribe(onNext:{ print("3th, \(Date()),\($0)") },
+                       onCompleted: { print("3th, onCompleted") })
+            .disposed(by: disposeBag)
+        
+        print("4th ===============================")
+        
+        Observable.range(start: 0, count: 10000)
+            .throttle(dueTime, scheduler: MainScheduler.instance)
+            .subscribe(onNext:{ print("4th, \(Date()),\($0)") },
+                       onCompleted: { print("4th, onCompleted") })
+            .disposed(by: disposeBag)
+        
+        print("5th ===============================")
+        
+        Observable.range(start: 0, count: 100000)
+            .throttle(dueTime, scheduler: MainScheduler.instance)
+            .subscribe(onNext:{ print("5th, \(Date()),\($0)") },
+                       onCompleted: { print("5th, onCompleted") })
+            .disposed(by: disposeBag)</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xy7-WE-aFn" firstAttribute="top" secondItem="aX6-El-Yg6" secondAttribute="top" constant="20" id="DD4-jY-xVO"/>
+                            <constraint firstItem="aX6-El-Yg6" firstAttribute="bottom" secondItem="J3J-sz-dP5" secondAttribute="bottom" constant="20" id="Nn2-az-h8J"/>
+                            <constraint firstItem="J3J-sz-dP5" firstAttribute="leading" secondItem="aX6-El-Yg6" secondAttribute="leading" constant="20" id="PhS-wf-0Gy"/>
+                            <constraint firstItem="xy7-WE-aFn" firstAttribute="leading" secondItem="aX6-El-Yg6" secondAttribute="leading" constant="20" id="Z1r-r0-gC9"/>
+                            <constraint firstItem="J3J-sz-dP5" firstAttribute="top" secondItem="xy7-WE-aFn" secondAttribute="bottom" constant="20" id="c4o-sQ-QSf"/>
+                            <constraint firstItem="aX6-El-Yg6" firstAttribute="trailing" secondItem="J3J-sz-dP5" secondAttribute="trailing" constant="20" id="mQR-NV-XBR"/>
+                            <constraint firstAttribute="trailing" secondItem="xy7-WE-aFn" secondAttribute="trailing" constant="20" id="sfN-2x-8kS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aX6-El-Yg6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHu-y4-WO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="69"/>
+        </scene>
+    </scenes>
+</document>
