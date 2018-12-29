@@ -32,6 +32,8 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 
 
 # 장점
+<details><summary><code>Rx</code>에겐 특별한 것이 있다.</summary>
+
 - [** ☆ Rx에겐 특별한 것이 있다. ☆ **](https://iamchiwon.github.io/2018/11/29/rxhasmore/) : 특별합니다.!!
 - 높은 가독성이 있습니다.
   - 코드가 기존 방식에 비해 간결해 진다고 합니다.
@@ -44,6 +46,8 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - 쉽게 사용할 수 있는 좋은 아키텍쳐들도 있습니다.
 - 회사에 안드로이드, 프론트 모두 RX로 되어있다면, 모두가 RX로 대화할 수 있습니다. (러닝커브가 이해하면.. 높은 만큼 대화에 재미가 있습니다.)
 
+</details>
+
 # 단점
 - 러닝 커브가 높습니다.
 
@@ -54,24 +58,42 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
     - 필요한 오퍼레이터 들이 있고, 이해하기 좋게 조작해 볼 수 있습니다. 
 
 # 좋은 블러그
+<details><summary><code>ClintJang</code></summary>
+
 - ClintJang
 	- [RxSwift 시작하기](https://medium.com/@jang.wangsu/rxswift-rxswift-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-4b5187d07a33)
 	- [RxSwift란? ReactiveX 란?](https://medium.com/@jang.wangsu/rxswift-rxswift%EB%9E%80-reactivex-%EB%9E%80-b21f75e34c10)
 	- [RxSwift에서 시퀀스(sequence)란?](https://medium.com/@jang.wangsu/rxswift-rxswift%EC%97%90%EC%84%9C-%EC%8B%9C%ED%80%80%EC%8A%A4-sequence-%EB%9E%80-6d3fd2b14c29)
-	
+
+</details>	
+
+<details><summary><code>마기님</code></summary>
+
 - 마기님
 	- [RxSwift에 대해서 알아보기(ReactiveX 에 대해서) - 01](https://magi82.github.io/ios-rxswift-01/)
 	- [RxSwift에 대해서 알아보기(Observable에 대해서) - 02](https://magi82.github.io/ios-rxswift-02/)
 - [Wade님](https://brunch.co.kr/@tilltue/2) 
+
+</details>
+
+<details><summary><code>민소네님</code></summary>
+
 - 민소네님
 	- [RxSwift를 직접 구현해보기 - Event, Disposable, Observer, Observable](http://minsone.github.io/programming/swift4-implement-own-rx-event-disposable-observer-observable)
 	- [Closure, Delegate 대신 Observable을 사용해서 응답값을 쉽게 처리하기](http://minsone.github.io/programming/rxswift-observable-of-delegate-callback)
+
+</details>
+
+<details><summary><code>Kanghoon님</code></summary>
+
 - Kanghoon님
 	- [#1 — RxSwift 시작하기](https://medium.com/@ggaa96/rxswift-1-rxswift-%EC%9E%85%EB%AC%B8-67bfdbd91969)
 	- [#2 — Observable 과 Subject (+ Relay) 알아보기](https://medium.com/@ggaa96/rxswift-2-observable-subject-relay-8fcd9b01913d)
 	- [#3 — Operator 에 대해 알아보자](https://medium.com/@ggaa96/rxswift-3-learn-about-operators-99bd1c44a5f9)
 - https://pilgwon.github.io/blog/2017/09/21/why-rxswift.html
 - http://mobicon.tistory.com/467
+
+</details>
 
 # 어떻게 시작을 해야될까?
 <pre>
@@ -96,8 +118,7 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 # 기본 용어
 
 ## Observable
-> ReactiveX에서 Observable은 Observer를 구독합니다. <br />
-그런 다음 Observer는 Observable Sequence에 따라 반응합니다.
+<details><summary>ReactiveX에서 Observable은 Observer를 구독합니다. 그런 다음 Observer는 Observable Sequence에 따라 반응합니다.</summary>
 
 <img src="http://reactivex.io/assets/operators/legend.png" width="400" />
 
@@ -110,32 +131,46 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 	- 콜드 옵저버블은 구독(subscribe())하지 않으면 데이터를 발행하지 않습니다.
 	- 핫 옵저버블은 구독과 관계없이 데이터를 발행합니다.
 
+</details>
+
 ## disposable, disposeBag
+<details><summary>해지 시키는 역활을 하죠.</summary>
+
 - subscribe(구독하다)가 반환해 주는 것이 disposable(일회용)
 - disposeBag 은 disposable 들을 담아두는 것을 말합니다.
 	- 만약 해지 하고 싶은 대상의 disposeBag에 담으면, 그 대상이 메모리 해지 될때(dealloc) 담겨있는 disposable이 해지됩니다.
 - 해지가 안되면 메모리 릭이 발생하겠죠.
 
-## Subject
-> http://reactivex.io/documentation/subject.html
+</details>
+
+## [Subject](http://reactivex.io/documentation/subject.html)
 
 ### PublishSubject
+<details><summary>구독 이후에 소스 Observable(들)이 배출한 항목들만 옵저버에게 배출합니다.</summary>
 
 <img src="http://reactivex.io/documentation/operators/images/S.PublishSubject.png" width="300" />
 
 - [PublishSubjectViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/PublishSubject/PublishSubjectViewController.swift)
 
+</details>
+
 ### BehaviorSubject
+<details><summary>옵저버가 BehaviorSubject를 구독하기 시작하면, 옵저버는 소스 Observable이 가장 최근에 발행한 항목(또는 아직 아무 값도 발행되지 않았다면 맨 처음 값이나 기본 값)의 발행을 시작하며 그 이후 소스 Observable(들)에 의해 발행된 항목들을 계속 발행합니다.</summary>
 
 <img src="http://reactivex.io/documentation/operators/images/S.BehaviorSubject.png" width="300" />
 
 - [BehaviorSubjectViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/BehaviorSubject/BehaviorSubjectViewController.swift)
 
+</details>
+
 ### ReplaySubject
+<details><summary>옵저버가 구독을 시작한 시점과 관계 없이 소스 Observable(들)이 배출한 모든 항목들을 모든 옵저버에게 배출합니다.</summary>
 
 <img src="http://reactivex.io/documentation/operators/images/S.ReplaySubject.png" width="300" />
 
 - [ReplaySubjectViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/ReplaySubject/ReplaySubjectViewController.swift)
+
+</details>
 
 ## Relay
 > Subject를 Wrapping 하고 있고, dispose 되기 전까지 계속 작동하는 특징이 있죠.
@@ -151,7 +186,9 @@ rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - [VariableViewController.swift](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/JWSRxSwiftBeginningSample/JWSRxSwiftBeginningSample/Samples/Variable/VariableViewController.swift)
 
 ## Operator
-### [Creating Observables](https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#creating-observables)
+### Creating Observables
+> https://github.com/ClintJang/sample-rxswift-beginning/blob/master/README.md#creating-observables
+
 #### Create
 > http://reactivex.io/documentation/operators/create.html
 
