@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PublishSubjectViewController: BaseViewController {
+final class PublishSubjectViewController: BaseViewController {
 
     let subjectString = PublishSubject<String>()
     

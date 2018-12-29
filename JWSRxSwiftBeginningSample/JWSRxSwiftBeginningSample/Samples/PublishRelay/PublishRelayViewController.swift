@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PublishRelayViewController: BaseViewController {
+final class PublishRelayViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

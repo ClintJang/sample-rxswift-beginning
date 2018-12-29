@@ -12,7 +12,7 @@ import UIKit
 /// **This concept will be deprecated from RxSwift but offical migration path hasn't been decided yet.**
 /// https://github.com/ReactiveX/RxSwift/issues/1501
 
-class VariableViewController: BaseViewController {
+final class VariableViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

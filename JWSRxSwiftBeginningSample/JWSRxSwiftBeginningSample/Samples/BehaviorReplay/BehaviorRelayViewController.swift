@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BehaviorRelayViewController: BaseViewController {
+final class BehaviorRelayViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

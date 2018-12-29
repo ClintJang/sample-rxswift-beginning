@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilterViewController: BaseViewController {
+final class FilterViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GugudanViewController: BaseViewController {
+final class GugudanViewController: BaseViewController {
 
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var runButton: UIButton!

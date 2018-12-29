@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IntervalViewController: BaseViewController {
+final class IntervalViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

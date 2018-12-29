@@ -3,7 +3,8 @@
 [`RxSwift` 공부하자!](https://medium.com/@jang.wangsu/rxswift-rxswift-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-4b5187d07a33) 
 
 > Rx : **R**eactive e**X**tensions
-리엑티브 프로그래밍 패러다임이고, 데이터 흐름과 그 데이터의 변경에 따라 전달 되는 것을 중요시 생각하는 패러다임 같습니다. 
+리엑티브 프로그래밍 패러다임이고, 데이터 흐름과 그 데이터의 변경에 따라 전달 되는 것을 중요시 생각하는 패러다임 같습니다. <br />
+**Rx는 Observable 흐름을 가지고, 비동기 프로그래밍을 하기 위한 API 입니다.** 
 >> 관련 어려운 단어! <br />
 >> Reactive Programming (RP) <br />
 >> Functional + RX = Functional Reactive Programming(FRP) <br />
@@ -12,11 +13,11 @@
 
 ```
 ReactiveX
-rxswift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다. 
+RxSwift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다. 
 ```
 
 # 셈플
-> 개발하면서 테스트 소스를 작성하면서 공부를 하고 있습니다.<br />
+> 테스트 소스를 작성하면서 공부를 하고 있습니다.<br />
 > 아직은 미흡하죠 .. 계속 수정중
 
 <table style="width:100%">

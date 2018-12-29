@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeferredViewController: BaseViewController {
+final class DeferredViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

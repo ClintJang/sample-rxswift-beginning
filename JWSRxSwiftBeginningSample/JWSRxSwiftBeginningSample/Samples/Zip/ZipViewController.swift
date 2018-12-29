@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZipViewController: BaseViewController {
+final class ZipViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

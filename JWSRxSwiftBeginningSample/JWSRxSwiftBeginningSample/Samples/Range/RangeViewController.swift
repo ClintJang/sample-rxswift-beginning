@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RangeViewController: BaseViewController {
+final class RangeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

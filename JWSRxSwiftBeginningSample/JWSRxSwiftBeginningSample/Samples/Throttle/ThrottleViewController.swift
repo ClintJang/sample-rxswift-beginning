@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThrottleViewController: BaseViewController {
+final class ThrottleViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

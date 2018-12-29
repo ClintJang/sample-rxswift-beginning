@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BehaviorSubjectViewController: BaseViewController {
+final class BehaviorSubjectViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

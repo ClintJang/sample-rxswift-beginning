@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReplaySubjectViewController: BaseViewController {
+final class ReplaySubjectViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

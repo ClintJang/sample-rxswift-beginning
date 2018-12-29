@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConcatViewController: BaseViewController {
+final class ConcatViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
