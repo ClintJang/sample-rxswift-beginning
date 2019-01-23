@@ -119,7 +119,8 @@ RxSwift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 # 기본 용어
 
 ## Observable
-<details><summary>ReactiveX에서 Observable은 Observer를 구독합니다. 그런 다음 Observer는 Observable Sequence에 따라 반응합니다.</summary>
+<details><summary>ReactiveX에서 Observer는 Observable를 구독합니다. Observable이 배출하는 하나 또는 연속된 항목에
+Observer는 반응합니다. Observable이라는 객체를 활용해서 내보내고, 관찰 및 구독해서 원하는 개발을 가능하게 하여주죠.👍</summary>
 
 <img src="http://reactivex.io/assets/operators/legend.png" width="400" />
 
