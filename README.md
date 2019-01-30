@@ -65,6 +65,8 @@ RxSwift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 	- [RxSwift 시작하기](https://medium.com/@jang.wangsu/rxswift-rxswift-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-4b5187d07a33)
 	- [RxSwift란? ReactiveX 란?](https://medium.com/@jang.wangsu/rxswift-rxswift%EB%9E%80-reactivex-%EB%9E%80-b21f75e34c10)
 	- [RxSwift에서 시퀀스(sequence)란?](https://medium.com/@jang.wangsu/rxswift-rxswift%EC%97%90%EC%84%9C-%EC%8B%9C%ED%80%80%EC%8A%A4-sequence-%EB%9E%80-6d3fd2b14c29)
+	- [RxSwift로 구구단을 만들어 볼까요?](https://medium.com/@jang.wangsu/rxswift-%EA%B5%AC%EA%B5%AC%EB%8B%A8%EC%9D%84-%EB%A7%8C%EB%93%A4%EC%96%B4-%EB%B3%BC%EA%B9%8C%EC%9A%94-d4949f6c0ad6)
+	- [RxSwift 동영상 세션 링크 모음](https://github.com/ClintJang/awesome-swift-korean-lecture/blob/master/README.md#rxswift)
 
 </details>	
 
@@ -73,7 +75,22 @@ RxSwift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 - 마기님
 	- [RxSwift에 대해서 알아보기(ReactiveX 에 대해서) - 01](https://magi82.github.io/ios-rxswift-01/)
 	- [RxSwift에 대해서 알아보기(Observable에 대해서) - 02](https://magi82.github.io/ios-rxswift-02/)
-- [Wade님](https://brunch.co.kr/@tilltue/2) 
+	- [RxSwift 알아보기(subscribe, dispose에 대해서) - 03](https://magi82.github.io/ios-rxswift-03/)
+
+</details>
+
+<details><summary><code>tilltue님</code></summary>
+
+- tilltue님
+	- [RxSwift 시작하기](https://brunch.co.kr/@tilltue/2)
+	- [RxSwift, Observable 생성](https://brunch.co.kr/@tilltue/2) 
+	- [RxSwift, Subject 알아보기](https://brunch.co.kr/@tilltue/3) 
+	- [RxSwift, Observale 의 합성](https://brunch.co.kr/@tilltue/5)
+	- [RxSwift, Error 처리](https://brunch.co.kr/@tilltue/8)
+	- [RxSwift, Observable의 변형](https://brunch.co.kr/@tilltue/9)
+	- [RxSwift, Filtering Observable](https://brunch.co.kr/@tilltue/10)
+	- [RxSwift, RxCocoa, 시작하기](https://brunch.co.kr/@tilltue/11)
+
 
 </details>
 
@@ -91,6 +108,11 @@ RxSwift 셈플링을 하며 기능 익히기를 위한 레파지토리입니다.
 	- [#1 — RxSwift 시작하기](https://medium.com/@ggaa96/rxswift-1-rxswift-%EC%9E%85%EB%AC%B8-67bfdbd91969)
 	- [#2 — Observable 과 Subject (+ Relay) 알아보기](https://medium.com/@ggaa96/rxswift-2-observable-subject-relay-8fcd9b01913d)
 	- [#3 — Operator 에 대해 알아보자](https://medium.com/@ggaa96/rxswift-3-learn-about-operators-99bd1c44a5f9)
+
+</details>
+
+<details><summary><code>그 외</code></summary>
+
 - https://pilgwon.github.io/blog/2017/09/21/why-rxswift.html
 - http://mobicon.tistory.com/467
 
